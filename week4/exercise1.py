@@ -36,10 +36,7 @@ def get_some_details():
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName":       None,
-            "password":       None,
-            "postcodePlusID": None
-            }
+    return {"lastName": None, "password": None, "postcodePlusID": None}
 
 
 def wordy_pyramid():
@@ -99,13 +96,10 @@ def wunderground():
     url = template.format(base=base, key=api_key, country=country, city=city)
     r = requests.get(url)
     if r.status_code is 200:
-    the_json = json.loads(r.text)
+        the_json = json.loads(r.text)
         obs = the_json["current_observation"]
 
-    return {"state":           None,
-            "latitude":        None,
-            "longitude":       None,
-            "local_tz_offset": None}
+    return {"state": None, "latitude": None, "longitude": None, "local_tz_offset": None}
 
 
 def diarist():
