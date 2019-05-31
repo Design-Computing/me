@@ -12,7 +12,7 @@ def getLetter(index):
 
 
 def week2exersise2():
-    wordArray = []  # hint: should this be a dictionary?
+    wordArray = []  # hint: this shouldn't be a dictionary
     indices = [12, 2, 26, 7, 0, 12, 12, 4, 17]
     for index in indices:
         wordArray.append(getLetter(index))
