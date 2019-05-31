@@ -8,7 +8,9 @@ Modify each function until the tests pass.
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
-    Do this using any method apart from just using range()
+    Do this using any method apart from JUST using range()
+    The look up the docs for range(), you can answer this with just the range 
+    function, but we'd like you to do it the long way, probably using a loop.
     """
     return None
 
@@ -35,6 +37,8 @@ def stubborn_asker(low, high):
 
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
+
+    Look up the docs for input
     """
     return None
 
@@ -42,8 +46,8 @@ def stubborn_asker(low, high):
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
 
-    Ask for a number, and if the response is actually NOT a number (e.g. "cow",
-    "six", "8!") then throw it out and ask for an actual number.
+    Ask for a number, and if the response is actually NOT a number 
+    (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
     return None
@@ -54,6 +58,7 @@ def super_asker(low, high):
 
     Combine stubborn_asker and not_number_rejector to make a function
     that does it all!
+    Don't rewrite the code here, call the functions.
     """
     return None
 
