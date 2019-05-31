@@ -3,9 +3,6 @@
 Steps on the way to making your own guessing game.
 """
 
-
-from exercise1 import not_number_rejector
-from exercise1 import super_asker
 import random
 
 
@@ -34,4 +31,4 @@ def advancedGuessingGame():
 
 
 if __name__ == "__main__":
-    advancedGuessingGame()
+    print(advancedGuessingGame())
