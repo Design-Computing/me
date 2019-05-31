@@ -17,7 +17,6 @@ if LOCAL != CWD:
     print("CWD", CWD)
 
 
-
 def get_some_details():
     """Parse some JSON.
 
@@ -41,7 +40,6 @@ def get_some_details():
             "password":       None,
             "postcodePlusID": None
             }
-
 
 
 def wordy_pyramid():
@@ -100,8 +98,9 @@ def wunderground():
     template = "{base}/{key}/conditions/q/{country}/{city}.json"
     url = template.format(base=base, key=api_key, country=country, city=city)
     r = requests.get(url)
+    if r.status_code is 200:
     the_json = json.loads(r.text)
-    obs = the_json['current_observation']
+        obs = the_json["current_observation"]
 
     return {"state":           None,
             "latitude":        None,
@@ -126,11 +125,15 @@ def diarist():
 
 
 if __name__ == "__main__":
-    functions = [obj for name,obj in inspect.getmembers(sys.modules[__name__]) if (inspect.isfunction(obj))]
+    functions = [
+        obj
+        for name, obj in inspect.getmembers(sys.modules[__name__])
+        if (inspect.isfunction(obj))
+    ]
     for function in functions:
         try:
             print(function())
         except Exception as e:
             print(e)
     if not os.path.isfile("lasers.pew"):
-        print('diarist did not create lasers.pew')
+        print("diarist did not create lasers.pew")
