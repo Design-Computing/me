@@ -62,14 +62,49 @@ def put_behind_bars(input_string="very naughty boy"):
 
 def pet_filter(letter="a"):
     """Return a list of pets whose name contains the character 'letter'"""
-    pets = ["dog", "goat", "pig", "sheep", "cattle", "zebu", "cat", "chicken",
-            "guinea pig", "donkey", "duck", "water buffalo",
-            "western honey bee", "dromedary camel", "horse", "silkmoth",
-            "pigeon", "goose", "yak", "bactrian camel", "llama", "alpaca",
-            "guineafowl", "ferret", "muscovy duck", "barbary dove",
-            "bali cattle", "gayal", "turkey", "goldfish", "rabbit", "koi",
-            "canary", "society finch", "fancy mouse", "siamese fighting fish",
-            "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"]
+    pets = [
+        "dog",
+        "goat",
+        "pig",
+        "sheep",
+        "cattle",
+        "zebu",
+        "cat",
+        "chicken",
+        "guinea pig",
+        "donkey",
+        "duck",
+        "water buffalo",
+        "western honey bee",
+        "dromedary camel",
+        "horse",
+        "silkmoth",
+        "pigeon",
+        "goose",
+        "yak",
+        "bactrian camel",
+        "llama",
+        "alpaca",
+        "guineafowl",
+        "ferret",
+        "muscovy duck",
+        "barbary dove",
+        "bali cattle",
+        "gayal",
+        "turkey",
+        "goldfish",
+        "rabbit",
+        "koi",
+        "canary",
+        "society finch",
+        "fancy mouse",
+        "siamese fighting fish",
+        "fancy rat and lab rat",
+        "mink",
+        "red fox",
+        "hedgehog",
+        "guppy",
+    ]
     pass
 
 
@@ -80,6 +115,7 @@ def best_letter_for_pets():
     TIP: return just a letter, not the list of animals.
     """
     import string
+
     the_alphabet = string.ascii_lowercase
     pass
 
@@ -111,8 +147,9 @@ def make_filler_text_dictionary():
     (i.e. 3, 4, 5, 6, 7 and 3 words for each)
     TIP: you'll need the requests library
     """
-    
+
     import requests
+
     return
 
 
@@ -128,6 +165,7 @@ def random_filler_text(number_of_words=200):
         see line 77 of week4/hangman_leadboard.py for an example.
     """
     import random
+
     pass
 
 
@@ -136,7 +174,7 @@ def fast_filler(number_of_words=200):
 
     This time, the first time the code runs, save the dictionary returned
     from make_filler_text_dictionary to a file.
-    On the second run,if the file already exists use it instead of going to
+    On the second run, if the file already exists use it instead of going to
     the internet.
     Use the filename "dict_racey.json"
     TIP: you'll need the os library
@@ -147,7 +185,7 @@ def fast_filler(number_of_words=200):
     pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     print((greet()))
     print((three_counter()))
     print((fizz_buzz()))
