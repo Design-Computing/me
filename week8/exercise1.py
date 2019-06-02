@@ -138,7 +138,7 @@ def fast_filler(number_of_words=200):
     from make_filler_text_dictionary to a file.
     On the second run,if the file already exists use it instead of going to
     the internet.
-    Use the filename "dict_racey.words"
+    Use the filename "dict_racey.json"
     TIP: you'll need the os library
     TIP: you'll probably want to use json dumps and loads to get the dictionary
     into and out of the file. Be careful when you read it back in, it'll
