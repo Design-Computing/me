@@ -1,7 +1,6 @@
-name: Ben Doherty
+name: Your Name
 studentNumber: z1234567
-gitHubUsername: notionparallax
 unswEmail: noIdea@unsw.edu.au
 realEmail:
-  firstBit: ben  # this avoids spam, the @ is implied
-  otherBit: notionparallax.co.uk
+  firstBit: firstName.Lastname  # this avoids spam, the @ is implied
+  otherBit: whereIwork.com
