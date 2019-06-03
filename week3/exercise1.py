@@ -56,9 +56,10 @@ def not_number_rejector(message):
 def super_asker(low, high):
     """Robust asking function.
 
-    Combine stubborn_asker and not_number_rejector to make a function
-    that does it all!
-    Don't rewrite the code here, call the functions.
+    Combine what you learnt from stubborn_asker and not_number_rejector
+    to make a function that does it all!
+    Try to call at least one of the other functions to minimise the
+    amount of code.
     """
     return None
 

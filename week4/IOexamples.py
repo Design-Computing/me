@@ -74,13 +74,13 @@ def bury_time_capsule(something_for_your_kids_to_find, file_path):
 
 
 message_for_capsule = {"name": "Ben",
-                       "Year": 2017,
+                       "Year": 2019,
                        "Location": "Sydney",
                        "Greeting": "Yo whatup now and give a brother room",
                        "Fact": "It would take 1,200,000 mosquitoes, each " +
                                "sucking once, to completely drain the " +
                                "average human of blood",
-                       "Alphabet Inc Class A": "847.80USD",
+                       "Alphabet Inc Class A": "1106.50USD",
                        "fruit": ["apple", "apricot", "avocado", "abiu"]}
 
 bury_time_capsule(message_for_capsule, "under_the_patio.json")

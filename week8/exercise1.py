@@ -5,7 +5,7 @@ I'm in UR exam.
 This is the same as the weekly exercises, fill in the functions,
 and test them to see if they work.
 
-You've have 90 minutes.
+You have 90 minutes.
 """
 import string
 import time
