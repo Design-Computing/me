@@ -20,6 +20,9 @@ def fix_it(moves=True, should_move=True):
     "WD-40"
     "Duct Tape"
     "No Problem"
+
+    Most people write this function with 4 return statements. 
+    As an extra challenge, see if you can get that down to three.
     """
     return None
 
