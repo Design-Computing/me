@@ -1,6 +1,6 @@
 name: Your Name
 studentNumber: z1234567
-unswEmail: noIdea@unsw.edu.au
-realEmail:
+officialEmail: noIdea@unsw.edu.au
+contactEmail:
   firstBit: firstName.Lastname  # this avoids spam, the @ is implied
   otherBit: whereIwork.com
