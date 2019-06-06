@@ -13,8 +13,9 @@ def is_odd(a_number):
 def fix_it(moves=True, should_move=True):
     """Decide what to do.
 
-    Using the engineering flowchart (in week2 folder engineeringFlowchart.png)
-    for the rules, return the apropriate response to the input parameters.
+    Using the engineering flowchart (in week2 folder of the CODE1161-2019
+    repo engineeringFlowchart.png) for the rules, return the apropriate
+    response to the input parameters.
     Use conditional statements: if, else, elif etc.
     This function should return either:
     "WD-40"
@@ -40,9 +41,8 @@ def loops_1a():
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
 
-    using any method
-    return a list of number_of_items items, each one
-    a string with exacly one symbol in it.
+    Using any method, return a list of number_of_items items, each one a
+    string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
     """
     return None
@@ -129,7 +129,9 @@ def loops_5():
       ['(i8, j0)', '(i8, j1)', '(i8, j2)', '(i8, j3)', '(i8, j4)'],
       ['(i9, j0)', '(i9, j1)', '(i9, j2)', '(i9, j3)', '(i9, j4)']
     ]
-    you can construct strings either by concatinating them:
+
+    TIP:
+    You can construct strings either by concatinating them:
         "There are " + str(8) + " green bottles"
     or by using format:
         "There are {} green bottles".format(8)

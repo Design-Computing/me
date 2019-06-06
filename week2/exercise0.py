@@ -62,7 +62,7 @@ def shout(a_string):
     """Return a string in uppercase.
 
     look up the docs for string methods. Either in the official docs, here:
-        https://docs.python.org/2/library/string.html
+        https://docs.python.org/3/library/string.html
     or in any of the million places that google will give you.
     "python make a string uppercase" is a good starting search query.
     """
@@ -74,7 +74,7 @@ def shout(a_string):
 def really_shout(a_string):
     """Return a string in uppercase, with an exclamation mark on the end.
 
-    In the spirit of being DRY (don't repeat yourself) reuse the shout function
+    In the spirit of being DRY (don't repeat yourself) reuse the shout() function
     from above.
     Look up how to 'concatinate' strings to make this happen.
     """
@@ -96,6 +96,9 @@ def shout_with_a_number(a_string, a_number):
     return the_answer
 
 
+"""#################################"""
+
+
 def minitest(f, args, expected):
     """Run a function with a list of args and print a response.
 
@@ -115,6 +118,7 @@ def minitest(f, args, expected):
 
 
 if __name__ == "__main__":
+    """ This code runs when you run this file. """
     minitest(add_1, [1], 2)
     minitest(add_5, [1], 6)
     minitest(add_5, [6], 11)
