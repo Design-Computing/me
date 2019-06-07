@@ -1,0 +1,34 @@
+{
+    "architecture": [
+        "64bit",
+        "WindowsPE"
+    ],
+    "machine": "AMD64",
+    "os_name": "nt",
+    "platform": "Windows-10-10.0.17763-SP0",
+    "processor": "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel",
+    "release": "10",
+    "system": "Windows",
+    "uname": [
+        "Windows",
+        "Cross-Blade",
+        "10",
+        "10.0.17763",
+        "AMD64",
+        "Intel64 Family 6 Model 158 Stepping 10, GenuineIntel"
+    ],
+    "version": "10.0.17763",
+    "python_build": [
+        "default",
+        "Mar 27 2019 17:13:21"
+    ],
+    "python_compiler": "MSC v.1915 64 bit (AMD64)",
+    "python_implementation(": "CPython",
+    "python_version(": "3.7.3",
+    "python_version_tuple": [
+        "3",
+        "7",
+        "3"
+    ],
+    "cpu_count": 12
+}
