@@ -44,3 +44,4 @@ def usefulFunction(): # It defines the function of 'usefulFunction()'
 
 # This line prints the function called 'usefulFunction()'
 usefulFunction() # It prints the function called 'usefulFunction()'.
+
