@@ -12,15 +12,23 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    return None
 
+    list1 = []
+    while start < stop:
+        list1.append(start)
+        start += step
+    return list1
 
 def lone_ranger(start, stop, step):
     """Duplicate the functionality of range.
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
+    list2 = []
+    while start < stop:
+        list2.append(start)
+        start += step
+    return list2
 
 
 def two_step_ranger(start, stop):
@@ -29,7 +37,11 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+    list3 = []
+    while start < stop:
+        list3.append(start)
+        start += 2
+    return list3
 
 
 def stubborn_asker(low, high):
@@ -40,7 +52,13 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+
+    answer =  False
+    while answer != True:
+        num = input ("Insert a number that is larger than " + str(low) + "and less than " + str(high))
+        if int(num) > low and int(num) < high:
+            answer = True
+    return num
 
 
 def not_number_rejector(message):
@@ -50,8 +68,16 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
-
+    answer = False
+    while answer != True:
+        num = input (message)
+        try:
+            val = int(num)
+            print(num)
+            answer = True
+        except ValueError:
+            answer = False
+    return num
 
 def super_asker(low, high):
     """Robust asking function.
@@ -61,8 +87,13 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
 
+    answer =  False
+    while answer != True:
+        num1 = not_number_rejector("Insert a number that is larger than " + str(low) + "and less than " + str(high))
+        if int(num1) > low and int(num1) < high:
+            answer = True
+    return num1
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
