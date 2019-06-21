@@ -24,8 +24,11 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
-
+    thelist = []
+    while start < stop:
+        thelist.append(int(start))
+        start = start + step
+    return thelist
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -33,7 +36,11 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+    thelist = []
+    while start < stop:
+        thelist.append(int(start))
+        start = start + 2
+    return thelist
 
 
 def stubborn_asker(low, high):
@@ -44,7 +51,21 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    print("Welcome")
+    lower_bound = int(low)
+    upper_bound = int(high)
+    bounded = False #no guess yet
+
+    while not bounded:
+        guess = int(input("Guess a number: "))
+        if guess < lower_bound:
+            print ("Guess higher")
+        elif guess > upper_bound:
+            print ("Guess lower")
+        else:
+            bounded = True
+            print ("Yeet")
+    return guess
 
 
 def not_number_rejector(message):
@@ -54,7 +75,15 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    given = False
+    while not given:
+        number = str(input(message))
+        if (number.isdigit()):
+            print("yeEEEt")
+            return number
+        else:
+            print("gimme number")
+    return not_number_rejector
 
 
 def super_asker(low, high):
