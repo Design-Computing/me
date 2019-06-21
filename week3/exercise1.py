@@ -4,7 +4,6 @@
 Modify each function until the tests pass.
 """
 
-
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
@@ -30,7 +29,6 @@ def lone_ranger(start, stop, step):
         start += step
     return list2
 
-
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
 
@@ -43,7 +41,6 @@ def two_step_ranger(start, stop):
         start += 2
     return list3
 
-
 def stubborn_asker(low, high):
     """Ask for a number between low and high until actually given one.
 
@@ -55,11 +52,10 @@ def stubborn_asker(low, high):
 
     answer =  False
     while answer != True:
-        num = input ("Insert a number that is larger than " + str(low) + "and less than " + str(high))
+        num = input ("Insert a number that is larger than " + str(low) + " and less than " + str(high) + ": ")
         if int(num) > low and int(num) < high:
             answer = True
     return num
-
 
 def not_number_rejector(message):
     """Ask for a number repeatedly until actually given one.
