@@ -77,29 +77,27 @@ def wordy_pyramid():
     pass
 
 
-def wunderground():
-    """Find the weather station for Sydney.
+def pokedex(low=1, high=5):
+    """ Return the name, height and weight of the tallest pokemon in the range low to high.
 
-    Get some json from a request parse it and extract values.
-    Sign up to https://www.wunderground.com/weather/api/ and get an API key
+    Low and high are the range of pokemon ids to search between.
+    Using the Pokemon API: https://pokeapi.co get some JSON using the request library
+    (a working example is filled in below).
+    Parse the json and extract the values needed.
+    
     TIP: reading json can someimes be a bit confusing. Use a tool like
          http://www.jsoneditoronline.org/ to help you see what's going on.
     TIP: these long json accessors base["thing"]["otherThing"] and so on, can
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    base = "http://api.wunderground.com/api/"
-    api_key = "YOUR KEY - REGISTER TO GET ONE"
-    country = "AU"
-    city = "Sydney"
-    template = "{base}/{key}/conditions/q/{country}/{city}.json"
-    url = template.format(base=base, key=api_key, country=country, city=city)
+    template = "https://pokeapi.co/api/v2/pokemon/{id}"
+
+    url = template.format(base=base, id=5)
     r = requests.get(url)
     if r.status_code is 200:
         the_json = json.loads(r.text)
-        obs = the_json["current_observation"]
-
-    return {"state": None, "latitude": None, "longitude": None, "local_tz_offset": None}
+    return {"name": None, "weight": None, "height": None}
 
 
 def diarist():
