@@ -53,8 +53,10 @@ def stubborn_asker(low, high):
     answer =  False
     while answer != True:
         num = input ("Insert a number that is larger than " + str(low) + " and less than " + str(high) + ": ")
-        if int(num) > low and int(num) < high:
+        if int(num) > int(low) and int(num) < int(high):
             answer = True
+        else:
+            answer = False
     return num
 
 def not_number_rejector(message):
