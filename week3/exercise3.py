@@ -25,7 +25,6 @@ def advancedGuessingGame():
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """
-
     return "You got it!"
     # the tests are looking for the exact string "You got it!". Don't modify that!
 

@@ -94,8 +94,17 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
-
+    lower_bound = int(low)
+    upper_bound = int(high)
+    given = False
+    while not given:
+        number = str(input())
+        if (number.isdigit()):
+            stubborn_asker(lower_bound,upper_bound)
+            given = True
+        else:
+            print("gimme number")
+    return super_asker
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
