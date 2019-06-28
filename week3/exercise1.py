@@ -66,16 +66,24 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
+
     answer = False
     while answer != True:
-        num = input (message)
+        num = input(message)
         try:
-            val = int(num)
+            int(num)
             print(num)
             answer = True
-        except ValueError:
+        except ValueError as e:
             answer = False
-    return num
+            print("VALUE ERROR", e)
+        except TypeError as e:
+            answer = False
+            print("TYPE ERROR", e)
+        except Exception as e:
+            print(e)
+        
+    return int(num)
 
 def super_asker(low, high):
     """Robust asking function.
@@ -85,13 +93,13 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-
+    
     answer =  False
     while answer != True:
-        num1 = not_number_rejector("Insert a number that is larger than " + str(low) + "and less than " + str(high))
+        num1 = not_number_rejector("Insert a number that is larger than " + str(low) + "and less than " + str(high) + ": ")
         if int(num1) > low and int(num1) < high:
             answer = True
-    return num1
+    return int(num1)
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
