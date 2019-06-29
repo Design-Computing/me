@@ -25,6 +25,21 @@ def binary_search(low, high, actual_number):
     """
     tries = 0
     guess = 0
+    lowerbound = int(low)
+    upperbound = int(high)
+    bounded = False
+    while bounded is False:
+        guess = int(lowerbound + ((upperbound - lowerbound)/2))
+        if actual_number == guess:
+            bounded = True
+            continue #stops the rest of the loop once u hit the number
+        elif guess < actual_number: #keeps making the boundaries smaller and smaller until u pinpoint number
+            lowerbound = guess
+        elif guess > actual_number:
+            upperbound = guess
+        print(guess)
+        tries += 1 #increases the counter on attempts to find the number
+    
     return {"guess": guess, "tries": tries}
 
 
