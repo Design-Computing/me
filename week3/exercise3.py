@@ -26,9 +26,66 @@ def advancedGuessingGame():
     purpose if you can!
     """
 
+    print("\nWelcome to the guessing game!")
+    print("A number between _ and _ ?")
+    
+    bs = False
+    while bs == False:
+        preanswer1 = False
+        while preanswer1 != True:
+            upperBound = input("Enter an upper bound: ")
+            try:
+                int(upperBound)
+                int(upperBound) >= 0
+                preanswer1 = True
+            except ValueError:
+                print("Only whole number is accepted!")
+                preanswer1 = False
+        preanswer2 = False
+        while preanswer2 != True:
+            lowerBound = input("Enter an lower bound: ")
+            try:
+                int(lowerBound)
+                int(lowerBound) >= 0
+                preanswer2 = True
+            except ValueError:
+                print("Only whole number is accepted!")
+                preanswer2 = False
+        if upperBound <= lowerBound:
+            print("The upperbound can not be smaller or equal to the lowerbound!")
+        else:
+            bs = True
+    print("OK then, a number between " + str(lowerBound) + " and " + str(upperBound) + ".")
+
+    upperBound = int(upperBound)
+    lowerBound = int(lowerBound)
+    actualNumber = random.randint(lowerBound, upperBound)
+
+    guessed = False
+    while not guessed:
+        answer = False
+        while answer != True:
+          guessedNumber = input("Guess a number: ")
+          try:
+              val = int(guessedNumber)
+              answer = True
+          except ValueError:
+              answer = False
+              print("Only whole number is accepted!")
+        print("You guessed {},".format(guessedNumber),)
+        if int(guessedNumber) == actualNumber:
+            print("You got it!! It was {}".format(actualNumber))
+            guessed = True
+        elif int(guessedNumber) < actualNumber and int(guessedNumber) > lowerBound:
+            print("Too small, try again :'(")
+        elif int(guessedNumber) > actualNumber and int(guessedNumber) < upperBound:
+            print("Too big, try again :'(")
+        elif int(guessedNumber) > upperBound:
+            print("Your guess is not even within your range!\nIt is way to big, it should be lower than " + str(upperBound) + ". Try again :' ")
+        elif int(guessedNumber) < lowerBound:
+            print("Your guess is not even within your range!\nIt is way to small, it should be bigger than " + str(lowerBound) + ". Try again :' ")
     return "You got it!"
+
     # the tests are looking for the exact string "You got it!". Don't modify that!
-
-
 if __name__ == "__main__":
     print(advancedGuessingGame())

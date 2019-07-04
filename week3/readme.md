@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+This weeks's exercise is a lot hardeer than last week's one in my perspective. I am confuse about the failure testing for exercise 3. Because I don not understnad what kind of bug it's testing for. So that I cant get the first two test pass.
