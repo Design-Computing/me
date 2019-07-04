@@ -33,32 +33,33 @@ def advancedGuessingGame():
     while bs == False:
         preanswer1 = False
         while preanswer1 != True:
-            upperBound = input("Enter an upper bound: ")
+            lowerBound = input("Enter an lower bound: ")
             try:
-                int(upperBound)
+                int(lowerBound)
                 preanswer1 = True
             except ValueError:
                 print("Only whole number is accepted!")
                 preanswer1 = False
         preanswer2 = False
         while preanswer2 != True:
-            lowerBound = input("Enter an lower bound: ")
-            try:
-                int(lowerBound)
-                preanswer2 = True
-            except ValueError:
-                print("Only whole number is accepted!")
+            upperBound = input("Enter an upper bound: ")
+            if upperBound > lowerBound:
+                try:
+                    int(upperBound)
+                    bs = True
+                    preanswer2 = True
+                except ValueError:
+                    print("Only whole number is accepted!")
+                    upperBound = input("Enter an upper bound: ")
+                    preanswer2 = False
+            else:
+                print("The upperbound can not be smaller or equal to the lowerbound!")
                 preanswer2 = False
-        if upperBound <= lowerBound:
-            print("The upperbound can not be smaller or equal to the lowerbound!")
-            bs = False
-        else:
-            bs = True
-    print("OK then, a number between " + str(lowerBound) + " and " + str(upperBound) + ".")
+        print("OK then, a number between " + str(lowerBound) + " and " + str(upperBound) + ".")
 
     upperBound = int(upperBound)
     lowerBound = int(lowerBound)
-    actualNumber = random.randint(lowerBound, upperBound)
+    actualNumber = random.randint(lowerBound+1, upperBound)
 
     guessed = False
     while not guessed:
@@ -66,7 +67,7 @@ def advancedGuessingGame():
         while answer != True:
           guessedNumber = input("Guess a number: ")
           try:
-              val = int(guessedNumber)
+              int(guessedNumber)
               answer = True
           except ValueError:
               answer = False
@@ -81,7 +82,7 @@ def advancedGuessingGame():
             print("Too big, try again :'(")
         elif int(guessedNumber) > upperBound:
             print("Your guess is not even within your range!\nIt is way to big, it should be lower than " + str(upperBound) + ". Try again :' ")
-        elif int(guessedNumber) < lowerBound:
+        elif int(guessedNumber) <= lowerBound:
             print("Your guess is not even within your range!\nIt is way to small, it should be bigger than " + str(lowerBound) + ". Try again :' ")
     return "You got it!"
 
