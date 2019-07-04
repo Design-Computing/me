@@ -36,7 +36,6 @@ def advancedGuessingGame():
             upperBound = input("Enter an upper bound: ")
             try:
                 int(upperBound)
-                int(upperBound) >= 0
                 preanswer1 = True
             except ValueError:
                 print("Only whole number is accepted!")
@@ -46,13 +45,13 @@ def advancedGuessingGame():
             lowerBound = input("Enter an lower bound: ")
             try:
                 int(lowerBound)
-                int(lowerBound) >= 0
                 preanswer2 = True
             except ValueError:
                 print("Only whole number is accepted!")
                 preanswer2 = False
         if upperBound <= lowerBound:
             print("The upperbound can not be smaller or equal to the lowerbound!")
+            bs = False
         else:
             bs = True
     print("OK then, a number between " + str(lowerBound) + " and " + str(upperBound) + ".")
