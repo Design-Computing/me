@@ -12,7 +12,11 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    return None
+    thelist = []
+    while start < stop:
+        thelist.append(int(start))
+        start = start + step
+    return thelist
 
 
 def lone_ranger(start, stop, step):
@@ -20,8 +24,11 @@ def lone_ranger(start, stop, step):
 
     Look up the docs for range() and wrap it in a 1:1 way
     """
-    return None
-
+    thelist = []
+    while start < stop:
+        thelist.append(int(start))
+        start = start + step
+    return thelist
 
 def two_step_ranger(start, stop):
     """Make a range that steps by 2.
@@ -29,7 +36,11 @@ def two_step_ranger(start, stop):
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
     """
-    return None
+    thelist = []
+    while start < stop:
+        thelist.append(int(start))
+        start = start + 2
+    return thelist
 
 
 def stubborn_asker(low, high):
@@ -40,7 +51,21 @@ def stubborn_asker(low, high):
 
     Look up the docs for input
     """
-    return None
+    print("Welcome")
+    lower_bound = int(low)
+    upper_bound = int(high)
+    bounded = False #no guess yet
+
+    while not bounded:
+        guess = int(input("Guess a number: "))
+        if guess < lower_bound:
+            print ("Guess higher")
+        elif guess > upper_bound:
+            print ("Guess lower")
+        else:
+            bounded = True
+            print ("Yeet")
+    return guess
 
 
 def not_number_rejector(message):
@@ -50,7 +75,15 @@ def not_number_rejector(message):
     (e.g. "cow", "six", "8!") then throw it out and ask for an actual number.
     When you do get a number, return it.
     """
-    return None
+    given = False
+    while not given:
+        number = str(input(message))
+        if (number.isdigit()):
+            print("yeEEEt")
+            return number
+        else:
+            print("gimme number")
+    return not_number_rejector
 
 
 def super_asker(low, high):
@@ -61,8 +94,17 @@ def super_asker(low, high):
     Try to call at least one of the other functions to minimise the
     amount of code.
     """
-    return None
-
+    lower_bound = int(low)
+    upper_bound = int(high)
+    given = False
+    while not given:
+        number = str(input())
+        if (number.isdigit()):
+            stubborn_asker(lower_bound,upper_bound)
+            given = True
+        else:
+            print("gimme number")
+    return super_asker
 
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
