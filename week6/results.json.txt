@@ -1,0 +1,9 @@
+json = {
+  "username_me": "ArnoDYD",
+  "username_partner": "a362389462",
+  "commit_me": "https://github.com/ArnoDYD/tf-pose-estimation/blob/master/src/assignment.py",
+  "commit_partner": "https://github.com/a362389462/tf-pose-estimation/blob/master/src/assignment.py",
+  "commit_coauthor": "https://github.com/a362389462/tf-pose-estimation/pull/1/commits/b9297dfdc3c886aba682a1207644ded30783440b",
+  "screenshot_me": "D:\1-Uni\CoDe-Year-1\Year-1 Term-2\CODE1161\screenshot.jpg",
+  "screenshot_partner": "D:\1161\screenshot.jpg"
+}

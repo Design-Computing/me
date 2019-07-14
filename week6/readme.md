@@ -1,1 +1,2 @@
 TODO: Reflect on what you learned this week and what is still unclear.
+The taxi assignment is not hard in terms of logic, but to undertsnad or find out the vriables and functions made by others did took me some times.
