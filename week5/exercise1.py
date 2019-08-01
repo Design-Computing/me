@@ -49,7 +49,14 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
-    pass
+    start = 9
+    message = "Get ready to start in "
+    stop = 0
+    completion_message = "Let's go!"
+    while start > stop:
+        print(str(message) + "{}".format(start))
+        start = start - 1
+    print(completion_message)
 
 
 # TRIANGLES
@@ -62,6 +69,8 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
+    triangle = {"base": 3, "height": 4}
+    triangle["hypotenuse"] = sqrt((triangle["base"]^2) + (triangle["height"]^2))
     pass
 
 

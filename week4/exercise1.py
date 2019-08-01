@@ -34,9 +34,13 @@ def get_some_details():
          dictionaries.
     """
     json_data = open(LOCAL + "/lazyduck.json").read()
-
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+    lastName = data["results"][0]["name"]["last"]
+    password = data["results"][0]["login"]["password"]
+    postofthecode = data["results"][0]["location"]["postcode"]
+    eyedee = data["results"][0]["id"]["value"]
+    postcodePlusID = int(postofthecode) + int(eyedee)
+    return {"lastName": lastName, "password": password, "postcodePlusID": postcodePlusID}
 
 
 def wordy_pyramid():
@@ -74,37 +78,39 @@ def wordy_pyramid():
     ]
     TIP: to add an argument to a URL, use: ?argName=argVal e.g. &minLength=
     """
-    pass
 
 
-def wunderground():
-    """Find the weather station for Sydney.
-
-    Get some json from a request parse it and extract values.
-    Sign up to https://www.wunderground.com/weather/api/ and get an API key
+def pokedex(low=1, high=5):
+    """ Return the name, height and weight of the tallest pokemon in the range low to high.
+    Low and high are the range of pokemon ids to search between.
+    Using the Pokemon API: https://pokeapi.co get some JSON using the request library
+    (a working example is filled in below).
+    Parse the json and extract the values needed.
     TIP: reading json can someimes be a bit confusing. Use a tool like
          http://www.jsoneditoronline.org/ to help you see what's going on.
     TIP: these long json accessors base["thing"]["otherThing"] and so on, can
          get very long. If you are accessing a thing often, assign it to a
          variable and then future access will be easier.
     """
-    base = "http://api.wunderground.com/api/"
-    api_key = "YOUR KEY - REGISTER TO GET ONE"
-    country = "AU"
-    city = "Sydney"
-    template = "{base}/{key}/conditions/q/{country}/{city}.json"
-    url = template.format(base=base, key=api_key, country=country, city=city)
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
-        obs = the_json["current_observation"]
+    temp = "https://pokeapi.co/api/v2/pokemon/{id}" #here we have created a template 
 
-    return {"state": None, "latitude": None, "longitude": None, "local_tz_offset": None}
+    poke = 0 
 
+    for i in range(low,high): #range 1 .. 5
+        url = temp.format(base=temp, id=i) #created url using template
+        r = requests.get(url) #gets the url
+        if r.status_code is 200: #if all good 
+            the_json = json.loads(r.text)
+            poke_next = the_json["height"]
+            if poke_next > poke: #goes through the pokemon to find tallest 
+                poke = poke_next #saves the tallest pokemon
+                name = the_json["name"]  
+                weight = the_json["weight"]
+                height = the_json["height"] 
+    return {"name": name, "weight": weight, "height": height} #creates a dictionary with the following sub parts
 
 def diarist():
     """Read gcode and find facts about it.
-
     Read in Trispokedovetiles(laser).gcode and count the number of times the
     laser is turned on and off. That's the command "M10 P1".
     Write the answer (a number) to a file called 'lasers.pew' in the week4 directory.
@@ -114,7 +120,18 @@ def diarist():
          might be why. Try in rather than == and that might help.
     TIP: remember to commit 'lasers.pew' and push it to your repo, otherwise
          the test will have nothing to look at.
+    TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
+
+    gcode = open(LOCAL + "\Trispokedovetiles(laser).gcode", "r") #This opens the file
+    on_off_count = 0 #This is the intial count
+    for script in gcode:
+        print(script) #Prints script
+        if "M10 P1" in script:
+            on_off_count += 1 #Everytime "M10 P1" is in the script the count increases by 1 
+    f = open("lasers.pew", "w") #Opens lasers.pew file
+    f.write(str(on_off_count)) #Writes 
+    f.close #Closes
     pass
 
 
