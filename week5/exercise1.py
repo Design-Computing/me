@@ -49,14 +49,12 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
-    start = 9
-    message = "Get ready to start in "
+    start = 8
     stop = 0
-    completion_message = "Let's go!"
     while start > stop:
-        print(str(message) + "{}".format(start))
+        print(str(message) + " " + "{}".format(start))
         start = start - 1
-    print(completion_message)
+    return(completion_message)
 
 
 # TRIANGLES
@@ -69,34 +67,43 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
-    triangle = {"base": 3, "height": 4}
-    triangle["hypotenuse"] = sqrt((triangle["base"]^2) + (triangle["height"]^2))
-    pass
+    import math
+    hypotenuse = math.sqrt(base ** 2 + height ** 2) # ** is power
+    return hypotenuse
 
 
 def calculate_area(base, height):
-    pass
+    import math
+    area = 0.5*(base * height)
+    return area
 
 
 def calculate_perimeter(base, height):
-    pass
+    import math
+    perimeter = base + height + calculate_area(base, height)
+    return perimeter
 
-
-def calculate_aspect(base, height):
-    pass
+def calculate_aspect(base, height): #shape of triangle by comparing size lengths
+    if base > height:
+        aspect = "wide"
+    elif base == height:
+        aspect = "equal"
+    else:
+        aspect = "tall"    
+    return aspect
 
 
 # Make sure you reuse the functions you've already got
 # Don't reinvent the wheel
 def get_triangle_facts(base, height, units="mm"):
     return {
-        "area": None,
-        "perimeter": None,
-        "height": None,
-        "base": None,
-        "hypotenuse": None,
-        "aspect": None,
-        "units": None,
+        "area": calculate_area(base,height),
+        "perimeter": calculate_perimeter(base,height),
+        "height": height,
+        "base": base,
+        "hypotenuse": calculate_hypotenuse(base,height),
+        "aspect": calculate_aspect(base,height),
+        "units": units,
     }
 
 

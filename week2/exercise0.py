@@ -5,7 +5,7 @@
 
 The command to run the tests is:
 
-python ../course/week4/tests.py
+python ../course/week8/tests.py
 
 
 In each function, where you see:
