@@ -171,6 +171,7 @@ def random_filler_text(number_of_words=200):
         see line 77 of week4/hangman_leadboard.py for an example.
     """
     import random
+    myList
 
     return ""
 
