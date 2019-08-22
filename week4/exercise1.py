@@ -123,16 +123,19 @@ def diarist():
     TIP: this might come in handy if you need to hack a 3d print file in the future.
     """
 
-    gcode = open(LOCAL + "\Trispokedovetiles(laser).gcode", "r") #This opens the file
-    on_off_count = 0 #This is the intial count
-    for script in gcode:
-        print(script) #Prints script
-        if "M10 P1" in script:
-            on_off_count += 1 #Everytime "M10 P1" is in the script the count increases by 1 
-    f = open("lasers.pew", "w") #Opens lasers.pew file
-    f.write(str(on_off_count)) #Writes 
-    f.close #Closes
+    gcode_data = open(LOCAL + "/Trispokedovetiles(laser).gcode").read()
+
+    data = gcode.loads(gcode_data)
     pass
+    gcode_data = open(LOCAL + "/Trispokedovetiles(laser).gcode").readlines()
+    number_of_times = 0
+    for cactusLine in gcode_data:
+        print(cactusLine)
+        if "M10 P1" in cactusLine:
+            number_of_times += 1
+    f = open("lasers.pew", "w")
+    f.write(str(number_of_times))
+    f.close
 
 
 if __name__ == "__main__":
