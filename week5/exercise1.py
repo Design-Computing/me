@@ -49,12 +49,10 @@ def do_bunch_of_bad_things():
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
 def countdown(message, start, stop, completion_message):
-    start = 8
-    stop = 0
-    while start > stop:
-        print(str(message) + " " + "{}".format(start))
-        start = start - 1
-    return(completion_message)
+    for n in range(start,stop,0):
+        print(message + ' ' + str(n))
+    print(completion_message)
+    pass
 
 
 # TRIANGLES
@@ -67,31 +65,32 @@ def countdown(message, start, stop, completion_message):
 # The stub functions are made for you, and each one is tested, so this should
 # hand hold quite nicely.
 def calculate_hypotenuse(base, height):
-    import math
-    hypotenuse = math.sqrt(base ** 2 + height ** 2) # ** is power
-    return hypotenuse
+    hypotenuse = (base**2 + height**2)**(1/2)
+    return(hypotenuse)
+    
 
 
 def calculate_area(base, height):
-    import math
-    area = 0.5*(base * height)
-    return area
+    area = (base*height)/2
+    return(area)
+    
 
 
 def calculate_perimeter(base, height):
-    import math
-    perimeter = base + height + calculate_area(base, height)
-    return perimeter
+    perimeter = (base*base + height*height)**(1/2) + base + height
+    return(perimeter)
+    
 
-def calculate_aspect(base, height): #shape of triangle by comparing size lengths
-    if base > height:
+
+def calculate_aspect(base, height):
+    aspect = ""
+    if height > base:
+        aspect = "tall"
+    elif base < height:
         aspect = "wide"
-    elif base == height:
-        aspect = "equal"
     else:
-        aspect = "tall"    
+        aspect = "equal"
     return aspect
-
 
 # Make sure you reuse the functions you've already got
 # Don't reinvent the wheel
@@ -199,11 +198,25 @@ def wordy_pyramid(api_key):
 
 
 def get_a_word_of_length_n(length):
-    pass
-
+    import requests
+    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={l}"
+    word_api = url.format(base=url, l=length)
+    r = requests.get(word_api)
+    if r.status_code is 200:
+        return r.text
 
 def list_of_words_with_lengths(list_of_lengths):
-    pass
+    print(list_of_lengths)
+    import requests
+    url = "https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={ID}"
+    word_list = []
+    for n in range(len(list_of_lengths)):
+        l = list_of_lengths[n]
+        word_api = url.format(base=url, ID=l)
+        r = requests.get(word_api)
+        if r.status_code is 200:
+            word_list.append(r.text)
+    return word_list
 
 
 if __name__ == "__main__":
