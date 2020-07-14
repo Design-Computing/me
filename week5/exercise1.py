@@ -1,20 +1,25 @@
 # -*- coding: UTF-8 -*-
 """Refactoring.
 
-This exercise contains a complete and working example, but it's very poorly written.
+This exercise contains a complete and working example, but it's
+very poorly written.
 
 Your job is to go through it and make it as good as you can.
 
-That means making it self-documenting wherever possible, adding comments where
-it isn't. Take repeated code and make it into a function. Also use functions
-to encapsulate concepts. If something is done many times, maybe a map or a loop
-is called for. Etc.
+That means making it self-documenting wherever possible, adding 
+comments where it isn't. Take repeated code and make it into a 
+function. Also use functions to encapsulate concepts. If 
+something is done many times, maybe a map or a loop is called 
+for. Etc.
 
-Some functions will have directions as external comments, once you think you
-are on top of it, take these comments out. Others won't have comments and
-you'll need to figure out for yourself what to do.
+Some functions will have directions as external comments, once 
+you think you are on top of it, take these comments out. Others 
+won't have comments and you'll need to figure out for yourself 
+what to do.
 """
 
+import math
+import requests
 
 # This is a terrible function. The rest of the functions in this file do a
 # much better job of what it's trying to do. Once you've has a little look,
@@ -31,23 +36,27 @@ def do_bunch_of_bad_things():
     print("Getting ready to start in 1")
     print("Let's go!")
 
-    triangle = {"base": 3, "height": 4}
-    triangle["hypotenuse"] = triangle["base"] ** 2 + triangle["height"] ** 2
+    triangle = {"base": 3.0, "height": 4.0}
+    triangle["hypotenuse"] = math.sqrt(triangle["base"] ** 2 + triangle["height"] ** 2)
     print("area = " + str((triangle["base"] * triangle["height"]) / 2))
     print("side lengths are:")
     print("base: {}".format(triangle["base"]))
     print("height: {}".format(triangle["height"]))
     print("hypotenuse: {}".format(triangle["hypotenuse"]))
 
-    another_hyp = 5 ** 2 + 6 ** 2
+    another_hyp = math.sqrt(5 ** 2 + 6 ** 2)
     print(another_hyp)
 
-    yet_another_hyp = 40 ** 2 + 30 ** 2
+    yet_another_hyp = math.sqrt(40 ** 2 + 30 ** 2)
     print(yet_another_hyp)
 
 
 # return a list of countdown messages, much like in the bad function above.
 # It should say something different in the last message.
+# NOTE: It should return a list, not print the messages. The test
+#       that calls this function handles the printing itself
+# NOTE: It's going to make a lot more sense if you use the debugger a lot
+#       to understand what you're working with here.
 def countdown(message, start, stop, completion_message):
     pass
 
@@ -59,8 +68,8 @@ def countdown(message, start, stop, completion_message):
 # It should eventually return a dictionary of triangle facts. It should
 # optionally print information as a nicely formatted string. Make printing
 # turned off by default but turned on with an optional argument.
-# The stub functions are made for you, and each one is tested, so this should
-# hand hold quite nicely.
+# The stub functions are made for you, and each one is tested, so this
+# should hand hold quite nicely.
 def calculate_hypotenuse(base, height):
     pass
 
@@ -91,7 +100,7 @@ def get_triangle_facts(base, height, units="mm"):
     }
 
 
-# this should return a multi line string that looks a bit like this:
+# This should return a multi line string that looks a bit like this:
 #
 # 15
 # |
@@ -105,14 +114,16 @@ def get_triangle_facts(base, height, units="mm"):
 # It has a perimeter of 40.0mm
 # This is a tall triangle.
 #
-# but with the values and shape that relate to the specific
-# triangle we care about.
-def tell_me_about_this_right_triangle(facts_dictionary):
+# but with the values and shape that relate to the
+# specific triangle we care about.
+# There is a lot of code missing from this function, you need to write it.
+# The diagrams are just there to make your life easier.
+def diagram_this_triangle(facts_dictionary):
     tall = """
             {height}
             |
             |     |\\
-            |____>| \\  {hypotenuse}
+            |____>| \\ <-{hypotenuse}
                   |  \\
                   |   \\
                   ------
@@ -138,47 +149,57 @@ def tell_me_about_this_right_triangle(facts_dictionary):
         "This is a {aspect} triangle.\n"
     )
 
-    facts = pattern.format(**facts_dictionary)
+    facts = pattern.format(
+        **facts_dictionary
+    )  # **dictionary unpacks the key value pairs
 
 
 def triangle_master(base, height, return_diagram=False, return_dictionary=False):
+    """Tell us things about a triangle.
+
+    Can either return 
+        * a diagram as a string, 
+        * or facts as a dictionary, 
+        * or both, as a dictionary
+
+    NOTE: This should so very little work, it should really just call
+           other functions and then package the results.
+    """
+    dictionary_of_triangle_facts = None
+    diagram = None
     if return_diagram and return_dictionary:
-        return None
+        return {"diagram": diagram, "dictionary": dictionary_of_triangle_facts}
     elif return_diagram:
-        return None
+        return diagram
     elif return_dictionary:
-        return None
+        return dictionary_of_triangle_facts
     else:
         print("You're an odd one, you don't want anything!")
 
 
-def wordy_pyramid(api_key):
-    import requests
-
+def wordy_pyramid():
     baseURL = (
-        "http://api.wordnik.com/v4/words.json/randomWords?"
-        "api_key={api_key}"
-        "&minLength={length}"
-        "&maxLength={length}"
-        "&limit=1"
+        "https://us-central1-waldenpondpress.cloudfunctions.net/"
+        "give_me_a_word?wordlength={length}"
     )
     pyramid_list = []
     for i in range(3, 21, 2):
-        url = baseURL.format(api_key="", length=i)
+        url = baseURL.format(length=i)
         r = requests.get(url)
         if r.status_code is 200:
-            message = r.json()[0]["word"]
+            message = r.text
             pyramid_list.append(message)
         else:
             print("failed a request", r.status_code, i)
     for i in range(20, 3, -2):
-        url = baseURL.format(api_key="", length=i)
+        url = baseURL.format(length=i)
         r = requests.get(url)
         if r.status_code is 200:
-            message = r.json()[0]["word"]
+            message = r.text
             pyramid_list.append(message)
         else:
             print("failed a request", r.status_code, i)
+
     return pyramid_list
 
 
@@ -192,4 +213,8 @@ def list_of_words_with_lengths(list_of_lengths):
 
 if __name__ == "__main__":
     do_bunch_of_bad_things()
-    wordy_pyramid("a2a73e7b926c924fad7001ca3111acd55af2ffabf50eb4ae5")
+    countdown("We're about to start", 9, 1, "we finished, wheeeee!")
+    triangle_master(3, 5)
+    pyramid = wordy_pyramid()
+    for word in pyramid:
+        print(word)
