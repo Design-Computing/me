@@ -32,11 +32,13 @@ def be_cool_for_ever(name, file_path):
     history_book.write(name + " is cool")
     history_book.close()
 
+
 # look up what '..' means
 be_cool_for_ever("Ben", "../ben_is_cool.txt")
 be_cool_for_ever("Ben", "ben_is_cool.lol_UR_joking")
 
 # See where each file was saved
+
 
 def who_is_cool(file_path):
     """Read a file and print what it says."""
@@ -48,7 +50,8 @@ def who_is_cool(file_path):
     history_book.close()
 
 
-who_is_cool("ben_is_cool.txt")
+who_is_cool("../ben_is_cool.txt")
+who_is_cool("week4/lazyduck.json")
 
 
 # some JSON examples:
@@ -73,15 +76,17 @@ def bury_time_capsule(something_for_your_kids_to_find, file_path):
         return False
 
 
-message_for_capsule = {"name": "Ben",
-                       "Year": 2019,
-                       "Location": "Sydney",
-                       "Greeting": "Yo whatup now and give a brother room",
-                       "Fact": "It would take 1,200,000 mosquitoes, each " +
-                               "sucking once, to completely drain the " +
-                               "average human of blood",
-                       "Alphabet Inc Class A": "1106.50USD",
-                       "fruit": ["apple", "apricot", "avocado", "abiu"]}
+message_for_capsule = {
+    "name": "Ben",
+    "Year": 2019,
+    "Location": "Sydney",
+    "Greeting": "Yo whatup now and give a brother room",
+    "Fact": "It would take 1,200,000 mosquitoes, each "
+    + "sucking once, to completely drain the "
+    + "average human of blood",
+    "Alphabet Inc Class A": "1106.50USD",
+    "fruit": ["apple", "apricot", "avocado", "abiu"],
+}
 
 bury_time_capsule(message_for_capsule, "under_the_patio.json")
 
@@ -105,9 +110,7 @@ def dig_up_capsule(file_path):
             print(template.format(**contents))
             return True
         else:
-            print("Your dictionary is missing some keys.",
-                  contents,
-                  keys_needed)
+            print("Your dictionary is missing some keys.", contents, keys_needed)
             return False
     except Exception as e:
         print(e)
