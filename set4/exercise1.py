@@ -104,7 +104,7 @@ def diarist():
 
     Read in Trispokedovetiles(laser).gcode and count the number of times the
     laser is turned on and off. That's the command "M10 P1".
-    Write the answer (a number) to a file called 'lasers.pew' in the week4 directory.
+    Write the answer (a number) to a file called 'lasers.pew' in the Set4 directory.
     TIP: you need to write a string, so you'll need to cast your number
     TIP: Trispokedovetiles(laser).gcode uses windows style line endings. CRLF
          not just LF like unix does now. If your comparison is failing this

@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-"""Week 3.
+"""Set 3.
 
 Modify each function until the tests pass.
 """
@@ -8,7 +8,7 @@ Modify each function until the tests pass.
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
-    Do this using any method apart from JUST using range()
+    Do this using any method apart from JUST using range() #TODO: clarify this wording
     The look up the docs for range(), you can answer this with just the range 
     function, but we'd like you to do it the long way, probably using a loop.
     """

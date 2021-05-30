@@ -195,7 +195,7 @@ def random_filler_text(number_of_words=200):
     Make the paragraph have number_of_words words in it.
     Return it as a string
     TIP: you'll need the random library, 
-        see line 77 of week4/hangman_leadboard.py for an example.
+        see line 77 of Set4/hangman_leadboard.py for an example.
     """
     import random
 

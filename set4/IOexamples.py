@@ -51,7 +51,7 @@ def who_is_cool(file_path):
 
 
 who_is_cool("../ben_is_cool.txt")
-who_is_cool("week4/lazyduck.json")
+who_is_cool("Set4/lazyduck.json")
 
 
 # some JSON examples:
