@@ -9,12 +9,38 @@ import string
 import time
 
 
+def string_please() -> str:
+    """Returns a string, anything you like."""
+    return "I'm a string!"
+
+
+def list_please() -> list:
+    """Returns a list, anything you like."""
+    return [None, None]
+
+
+def dictionary_please() -> dict:
+    """Returns a dictionary, anything you like."""
+    return {"jelly": None}
+
+
+def is_it_5(some_number) -> bool:
+    """Returns True if the argument passed is 5, otherwise returns False."""
+    well_is_it = some_number == 5
+    return well_is_it
+
+
+def take_five(some_number) -> int:
+    """Subtracts 5 from some_number."""
+    return some_number - 5
+
+
 def greet(name="Towering Timmy"):
     """Return a greeting.
-    return a string of "Hello" and the name argument.
+    return a string of "Hello " and the name argument.
     E.g. if given as "Towering Timmy" it should return "Hello Towering Timmy"
     """
-    return "Hello {}".format(name)
+    return f"Hello {name}"
 
 
 def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
@@ -29,16 +55,32 @@ def three_counter(input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
     return count
 
 
+def n_counter(search_for_this, input_list=[1, 4, 3, 5, 7, 1, 3, 2, 3, 3, 5, 3, 7]):
+    """Count the number of times search_for_this shows up in the input_list.
+    Return an integer.
+    """
+    count = 0
+    for n in input_list:
+        if n is search_for_this:
+            count += 1
+    return count
+
+
 def fizz_buzz():
     """Do the fizzBuzz.
+
     This is the most famous basic programming test of all time!
        "Write a program that prints the numbers from 1 to 100. But for
         multiples of three print "Fizz" instead of the number and for
         the multiples of five print "Buzz". For numbers which are
         multiples of both three and five print "FizzBuzz"."
-            from https://blog.codinghorror.com/why-cant-programmers-program/
-    Return a list that has an integer if the number isn't special, and a string
-    if it is. E.g. [1, 2, "Fizz", 4, "Buzz", "Fizz", 7, ...]
+    from https://blog.codinghorror.com/why-cant-programmers-program/
+    
+    Return a list that has an integer if the number isn't special, 
+    and a string if it is. E.g. 
+        [1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 
+         'Fizz', 'Buzz',  11, 'Fizz', 13, 14, 
+         'FizzBuzz', 16, 17, ...]
     """
     fizzBuzzList = []
     # your code here
@@ -175,10 +217,9 @@ def fast_filler(number_of_words=200):
     the internet.
     Use the filename "dict_racey.json"
     TIP: you'll need the os and json libraries
-    TIP: you'll probably want to use json dumps and loads to get the dictionary
-    into and out of the file. Be careful when you read it back in, it'll
-    convert integer keys to strings.
-
+    TIP: you'll probably want to use json dumps and loads to get the 
+    dictionary into and out of the file. Be careful when you read it back in, 
+    it'll convert integer keys to strings.
     If you get this one to work, you are a Very Good Programmer™!
     """
     import random
@@ -209,8 +250,16 @@ def fast_filler(number_of_words=200):
 
 
 if __name__ == "__main__":
+    print("string_please", type(string_please()) == str)
+    print("list_please", type(list_please()) == list)
+    print("dictionary_please", type(dictionary_please()) == dict)
+    print("is_it_5", is_it_5(5))
+    print("is_it_5", is_it_5(6))
+    print("take_five", take_five(5))
+    print("take_five", take_five(3))
     print("greet:", greet())
     print("three_counter:", three_counter())
+    print("n_counter:", n_counter(7))
     print("fizz_buzz:", fizz_buzz())
     print("put_behind_bars:", put_behind_bars())
     print("pet_filter:", pet_filter())

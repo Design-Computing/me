@@ -187,7 +187,7 @@ def loops_7():
     return None
 
 
-def lp(some_kind_of_list, exercise_name):
+def little_printer(some_kind_of_list, exercise_name):
     """Help to see what's going on.
 
     This is a helper function that prints your
@@ -220,11 +220,11 @@ if __name__ == "__main__":
     print(fix_it(True, False), "fix_it")
     print(fix_it(False, True), "fix_it")
     print(fix_it(False, False), "fix_it")
-    lp(loops_1a(), "loops_1a")
-    lp(loops_1c(4, "×°×"), "loops_1c")
-    lp(loops_2(), "loops_2")
-    lp(loops_3(), "loops_3")
-    lp(loops_4(), "loops_4")
-    lp(loops_5(), "loops_5")
-    lp(loops_6(), "loops_6")
-    lp(loops_7(), "loops_7")
+    little_printer(loops_1a(), "loops_1a")
+    little_printer(loops_1c(4, "×°×"), "loops_1c")
+    little_printer(loops_2(), "loops_2")
+    little_printer(loops_3(), "loops_3")
+    little_printer(loops_4(), "loops_4")
+    little_printer(loops_5(), "loops_5")
+    little_printer(loops_6(), "loops_6")
+    little_printer(loops_7(), "loops_7")
