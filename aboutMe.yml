@@ -2,6 +2,8 @@ name: Your Name
 studentNumber: z1234567
 officialEmail: noIdea@unsw.edu.au
 contactEmail: # don't write on this line
-  # if your email is
   firstBit: firstName.Lastname # this avoids spam, the @ is implied
   otherBit: whereIwork.com
+# accounts
+stackOverflowLink: https://stackoverflow.com/users/1835727/ben
+github: notionparallax
