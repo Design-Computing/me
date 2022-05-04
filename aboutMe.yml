@@ -1,9 +1,9 @@
-name: Ben Doherty
-studentNumber: BVN
-officialEmail: ben_doherty@bvn.com.au
+name: Your Name
+studentNumber: z1234567 # if you're not at UNSW, your org name, e.g. BVN
+officialEmail: noIdea@unsw.edu.au
 contactEmail: # don't write on this line
-  firstBit: ben # this avoids spam, the @ is implied
-  otherBit: notionparallax.co.uk
+  firstBit: firstName.Lastname # this avoids spam, the @ is implied
+  otherBit: whereIwork.com
 # accounts
 stackOverflowLink: https://stackoverflow.com/users/1835727/ben
 github: notionparallax
