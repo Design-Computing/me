@@ -1,9 +1,9 @@
-name: Your Name
-studentNumber: z1234567
-officialEmail: noIdea@unsw.edu.au
+name: Ben Doherty
+studentNumber: BVN
+officialEmail: ben_doherty@bvn.com.au
 contactEmail: # don't write on this line
-  firstBit: firstName.Lastname # this avoids spam, the @ is implied
-  otherBit: whereIwork.com
+  firstBit: ben # this avoids spam, the @ is implied
+  otherBit: notionparallax.co.uk
 # accounts
 stackOverflowLink: https://stackoverflow.com/users/1835727/ben
 github: notionparallax
