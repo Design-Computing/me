@@ -22,7 +22,7 @@ def add_1(a_number):
 
     This isn't a trick!
 
-    This is an example function to get you started. 
+    This is an example function to get you started.
     Run the tests now and this one should go green. Free marks!
     """
     the_answer = a_number + 1
@@ -62,12 +62,12 @@ def shout(a_string):
     """Return a string in uppercase.
 
     look up the docs for string methods. Either in the official docs, here:
-        https://docs.python.org/3/library/string.html
+        https://docs.python.org/3/library/stdtypes.html#str
     or in any of the million places that google will give you.
     "python make a string uppercase" is a good starting search query.
-    HINT: there are a few things with upper case in their description, but 
-          they all do different things. You'll need to actually read the 
-          docs to find out which one you actually need. 
+    HINT: there are a few things with upper case in their description, but
+          they all do different things. You'll need to actually read the
+          docs to find out which one you actually need.
     """
     the_answer = None
 
@@ -79,7 +79,7 @@ def really_shout(a_string):
 
     In the spirit of being DRY (don't repeat yourself) reuse the shout() function
     from above.
-    You could do this by copying the code, but the tests are checking to see 
+    You could do this by copying the code, but the tests are checking to see
     that you've reused the function you already wrote.
     Look up how to 'concatinate' strings to make this happen.
     """
@@ -94,10 +94,10 @@ def shout_with_a_number(a_string, a_number):
     >>> shout_with_a_number('hello', 42)
     'HELLO 42'
 
-    HINT: Lookup how to cast a_number to a string or lookup how to use 
+    HINT: Lookup how to cast a_number to a string or lookup how to use
           string formatting in python.
-          There are a few ways to do this, so if you're looking for a 
-          challenge, see if you can make the test pass with at least two ways 
+          There are a few ways to do this, so if you're looking for a
+          challenge, see if you can make the test pass with at least two ways
           of doing the same job.
     """
     the_answer = None
@@ -131,7 +131,7 @@ def minitest(f, args, expected):
 
 
 if __name__ == "__main__":
-    """ This code runs when you run this file. """
+    """This code runs when you run this file."""
     minitest(add_1, [1], 2)
     minitest(add_5, [1], 6)
     minitest(add_5, [6], 11)
