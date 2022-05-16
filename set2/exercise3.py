@@ -22,7 +22,7 @@ def fix_it(moves=True, should_move=True):
     "Duct Tape"
     "No Problem"
 
-    Most people write this function with 4 return statements. 
+    Most people write this function with 4 return statements.
     As an extra challenge, see if you can get that down to three.
     """
     return None
@@ -131,10 +131,13 @@ def loops_5():
     ]
 
     TIP:
+    If you've got num_bottles, e.g. num_bottles = 8
     You can construct strings either by concatinating them:
-        "There are " + str(8) + " green bottles"
+        "There are " + str(num_bottles) + " green bottles"
     or by using format:
-        "There are {} green bottles".format(8)
+        "There are {} green bottles".format(num_bottles)
+    or, my favourite, f-strings:
+        f"There are {num_bottles} green bottles"
     you'll come to see the pros and cons of each over time.
     """
     return None

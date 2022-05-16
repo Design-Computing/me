@@ -62,7 +62,7 @@ def shout(a_string):
     """Return a string in uppercase.
 
     look up the docs for string methods. Either in the official docs, here:
-        https://docs.python.org/3/library/stdtypes.html#str
+        https://docs.python.org/3/library/string.html
     or in any of the million places that google will give you.
     "python make a string uppercase" is a good starting search query.
     HINT: there are a few things with upper case in their description, but
@@ -118,20 +118,31 @@ def minitest(f, args, expected):
     This is a helper. Don't edit it.
     """
     result = f(*args)
-    template = "expect {name}({args}) to be {expected} => {result}"
-    print(
-        template.format(
-            name=f.__name__,
-            args=str(args)[1:-1],
-            result=result == expected,
-            expected=expected,
-        )
-    )
+
+    name = (f.__name__,)
+    args = (str(args)[1:-1],)
+    result = (result == expected,)
+    expected = (expected,)
+    print(f"expect {name}({args}) to be {expected} => {result}")
     return result == expected
 
 
 if __name__ == "__main__":
     """This code runs when you run this file."""
+
+    print(
+        """
+          This section does a quick test on your results and prints them nicely
+          It's NOT the official tests, they are in tests.py as usual.
+          Add to these tests if you want, give them arguments etc. to make sure that your
+          code is robust to the situations that you'll see in action.
+
+          the format is: minitest(function_name, [list, of, arguments], expected_result)
+
+          REMEMBER: these aren't the tests that you submit, these are just
+          there to keep you sane."""
+    )
+
     minitest(add_1, [1], 2)
     minitest(add_5, [1], 6)
     minitest(add_5, [6], 11)
@@ -145,15 +156,4 @@ if __name__ == "__main__":
     minitest(really_shout, [""], "!")
     minitest(really_shout, ["!"], "!!")
     minitest(shout_with_a_number, ("hello", 42), "HELLO 42")
-    print(
-        """
-          This section does a quick test on your results and prints them nicely
-          It's NOT the official tests, they are in tests.py as usual.
-          Add to these tests if you want, give them arguments etc. to make sure that your
-          code is robust to the situations that you'll see in action.
-
-          the format is: minitest(function_name, [list, of, arguments], expected_result)
-
-          REMEMBER: these aren't the tests that you submit, these are just
-          there to keep you sane."""
-    )
+    print("p.s. see note above these results")

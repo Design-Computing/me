@@ -35,4 +35,5 @@ if __name__ = = "__main__":
     #        ⟰-- we use = for asignment, 
     # and == for checking if things are equal, 
     # this isn't either!
-    prin(set2exersise2())
+    hero = set2exersise2()
+    prin(hero)
