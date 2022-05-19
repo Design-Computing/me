@@ -106,12 +106,13 @@ def dig_up_capsule(file_path):
     Args:
         file_path (str): The path to where you want to save the json.
     """
+    mode = "r"  # from the docs
+    template = """{Greeting},\nDid you know that in {Year}, "{Fact}" was still true!"""
+    keys_needed = ["Greeting", "Year", "Fact"]
     try:
-        mode = "r"  # from the docs
         time_capsule = open(file_path, mode)
         contents = json.load(time_capsule)
         time_capsule.close()
-        keys_needed = ["Greeting", "Year", "Fact"]
         if all([key in contents for key in keys_needed]):
             print(template.format(**contents))
             return True
