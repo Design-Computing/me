@@ -12,26 +12,7 @@ def loop_ranger(start, stop=None, step=1):
     The look up the docs for range(), you can answer this with just the range
     function, but we'd like you to do it the long way, probably using a loop.
     """
-    # our_numbers = []
-    # live_number = start
-    # while live_number < stop:
-    #     our_numbers.append(live_number)
-    #     live_number += step
-
-    our_numbers = []
-    live_number = start
-    while live_number < stop:
-        our_numbers.append(live_number)
-        live_number += step
-    return our_numbers
-
-
-def lone_ranger(start, stop, step):
-    """Duplicate the functionality of range.
-
-    Look up the docs for range() and wrap it in a 1:1 way
-    """
-    return range(start, stop, step)
+    return None
 
 
 def two_step_ranger(start, stop):
@@ -85,7 +66,6 @@ if __name__ == "__main__":
     # NOTE: because some of these take user input you can't run them from
 
     print("\nloop_ranger", loop_ranger(1, 10, 2))
-    print("\nlone_ranger", lone_ranger(1, 10, 3))
     print("\ntwo_step_ranger", two_step_ranger(1, 10))
     print("\nstubborn_asker")
     stubborn_asker(30, 45)
