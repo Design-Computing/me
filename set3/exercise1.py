@@ -8,9 +8,14 @@ Modify each function until the tests pass.
 def loop_ranger(start, stop=None, step=1):
     """Return a list of numbers between start and stop in steps of step.
 
-    Do this using any method apart from JUST using range() #TODO: clarify this wording
-    The look up the docs for range(), you can answer this with just the range
-    function, but we'd like you to do it the long way, probably using a loop.
+    Using a while loop make a list of numbers that goes from the start number up
+    to, but not including, the stop number, in increments of step. E.g.:
+        start: 3
+        stop: 10
+        step: 2
+        will return: [3, 5, 7, 9]
+    Look up for how range() works in the python docs. You could  answer this
+    with just the range function, but we'd like you to do it the long way.
     """
     return None
 
@@ -30,10 +35,8 @@ def stubborn_asker(low, high):
     Ask for a number, and if the response is outside the bounds keep asking
     until you get a number that you think is OK
 
-    Look up the docs for input
+    Look up the docs for a function called "input"
     """
-    the_input = input("tell me your name: ")
-    print(f"I'm afraid I can't do that {the_input}")
     return None
 
 
