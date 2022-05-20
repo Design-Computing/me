@@ -128,5 +128,11 @@ if __name__ == "__main__":
             print(function())
         except Exception as e:
             print(e)
-    if not os.path.isfile("lasers.pew"):
+    if not os.path.isfile("set4/lasers.pew") and not os.path.isfile("lasers.pew"):
         print("diarist did not create lasers.pew")
+    elif not os.path.isfile("set4/lasers.pew") and os.path.isfile("lasers.pew"):
+        print(
+            "diarist did create lasers.pew, but in the me folder, it should be in the set4 folder"
+        )
+    elif os.path.isfile("set4/lasers.pew"):
+        print("lasers.pew is in the right place")
