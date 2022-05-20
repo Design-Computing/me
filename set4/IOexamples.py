@@ -19,7 +19,7 @@ import json
 
 def be_cool(name):
     """Just print, not actually doing any IO."""
-    print(name + " is cool")
+    print(f"{name} is cool")
 
 
 be_cool("Ben")
@@ -29,7 +29,7 @@ def be_cool_for_ever(name, file_path):
     """Save a message about being cool for ever."""
     mode = "w"  # from the docs
     history_book = open(file_path, mode)
-    history_book.write(name + " is cool")
+    history_book.write(f"{name} is cool")
     history_book.close()
 
 
