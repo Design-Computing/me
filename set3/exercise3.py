@@ -22,6 +22,9 @@ def advancedGuessingGame():
     NOTE: whilst you CAN write this from scratch, and it'd be good for you to
     be able to eventually, it'd be better to take the code from exercise 2 and
     merge it with code from excercise 1.
+    You can refactor a bit, you should refactor a bit! Don't put the code all
+    inside this function, think about reusable chunks of code that you can call
+    in several places.
     Remember to think modular. Try to keep your functions small and single
     purpose if you can!
     """

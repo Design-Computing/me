@@ -1,10 +1,7 @@
 # -*- coding: UTF-8 -*-
 """Set 3, Exercise 4."""
 
-
 import math
-
-# import time
 
 
 def binary_search(low, high, actual_number):
@@ -13,15 +10,15 @@ def binary_search(low, high, actual_number):
     This is going to be your first 'algorithm' in the usual sense of the word!
     you'll give it a range to guess inside, and then use binary search to home
     in on the actual_number.
-    
+
     Each guess, print what the guess is. Then when you find the number return
     the number of guesses it took to get there and the actual number
     as a dictionary. make sure that it has exactly these keys:
     {"guess": guess, "tries": tries}
-    
+
     This will be quite hard, especially hard if you don't have a good diagram!
-    
-    Use the VS Code debugging tools a lot here. It'll make understanding 
+
+    Use the VS Code debugging tools a lot here. It'll make understanding
     things much easier.
     """
     tries = 0

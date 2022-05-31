@@ -1,7 +1,5 @@
 # -*- coding: UTF-8 -*-
-"""Modify each function until the tests the_answer = None
-
-    return the_answer.
+"""Modify each function so that it does what the doc string asks you to do.
 
 The command to run the tests is:
 
@@ -14,6 +12,8 @@ In each function, where you see:
 
 replace None with the actual answer.
 
+Remember, none of these are trick questions. If it seems like an incredibly 
+obvious answer, that's because it is!
 """
 
 
@@ -26,7 +26,6 @@ def add_1(a_number):
     Run the tests now and this one should go green. Free marks!
     """
     the_answer = a_number + 1
-
     return the_answer
 
 
@@ -44,7 +43,6 @@ def add_5(a_number):
     except expressed in python, not english
     """
     the_answer = None
-
     return the_answer
 
 
@@ -54,7 +52,6 @@ def adder(a_number, another_number):
     Same as above, but with any two numbers.
     """
     the_answer = None
-
     return the_answer
 
 
@@ -70,7 +67,6 @@ def shout(a_string):
           docs to find out which one you actually need.
     """
     the_answer = None
-
     return the_answer
 
 
@@ -84,7 +80,6 @@ def really_shout(a_string):
     Look up how to 'concatinate' strings to make this happen.
     """
     the_answer = None
-
     return the_answer
 
 
@@ -101,7 +96,6 @@ def shout_with_a_number(a_string, a_number):
           of doing the same job.
     """
     the_answer = None
-
     return the_answer
 
 

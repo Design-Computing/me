@@ -6,6 +6,12 @@ def is_odd(a_number):
     """Return True if a_number is odd, and False if a_number is even.
 
     Look into modulo division using the '%' operator as one way of doing this.
+
+    e.g. 4 % 2 = 0
+        13 %12 = 1
+         3 % 2 = 1
+
+    So if a_number modulo two is zero, then it's even.
     """
     return None
 
@@ -28,6 +34,19 @@ def fix_it(moves=True, should_move=True):
     return None
 
 
+def loops_preview():
+    """Make 8 poops.
+
+    Using a for loop
+    return a list of 8 items, each one a string with exacly one 💩 in it.
+    E.g.: ['💩', '💩', '💩', '💩', '💩', '💩', '💩', '💩']
+    """
+    choc_list = []
+    for i in range(8):
+        choc_list.append("💩")
+    return choc_list
+
+
 def loops_1a():
     """Make 10 stars.
 
@@ -41,9 +60,12 @@ def loops_1a():
 def loops_1c(number_of_items=5, symbol="#"):
     """Respond to variables.
 
-    Using any method, return a list of number_of_items items, each one a
+    Return a list of number_of_items items, each one a
     string with exacly one symbol in it.
     E.g.: ['#', '#', '#', '#', '#']
+
+    Remember that you're being passed arguments here. Don't hard code the number
+    or the symbol, let it be whatever it wants to be.
     """
     return None
 
@@ -223,6 +245,7 @@ if __name__ == "__main__":
     print(fix_it(True, False), "fix_it")
     print(fix_it(False, True), "fix_it")
     print(fix_it(False, False), "fix_it")
+    little_printer(loops_preview(), "loops_preview")
     little_printer(loops_1a(), "loops_1a")
     little_printer(loops_1c(4, "×°×"), "loops_1c")
     little_printer(loops_2(), "loops_2")

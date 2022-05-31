@@ -1,6 +1,9 @@
 """Set 3, Exercise 2.
 
 An example of how a guessing game might be written.
+Play it through a few times, but also stress test it. What if your lower bound 
+is 🍟, or your guess is "pencil", or "seven"
+This will give you some intuition about how to make exercise 3 more robust.
 """
 
 

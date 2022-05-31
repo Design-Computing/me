@@ -25,6 +25,8 @@ def two_step_ranger(start, stop):
 
     Sometimes you want to hide complexity.
     Make a range function that always has a step size of 2
+
+    You can either reuse loop_ranger, or the range function that in the standard library
     """
     return None
 
@@ -55,8 +57,6 @@ def super_asker(low, high):
 
     Combine what you learnt from stubborn_asker and not_number_rejector
     to make a function that does it all!
-    Try to call at least one of the other functions to minimise the
-    amount of code.
     """
     return None
 

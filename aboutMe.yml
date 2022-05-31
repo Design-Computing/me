@@ -1,3 +1,6 @@
+# This file is UPER IMPORTANT. It's what joins your github name to your
+# student number, and that's what makes sure that you get a mark.
+
 name: Your Name
 studentNumber: z1234567 # if you're not at UNSW, your org name, e.g. BVN
 officialEmail: noIdea@unsw.edu.au
@@ -7,3 +10,14 @@ contactEmail: # don't write on this line
 # accounts
 stackOverflowLink: https://stackoverflow.com/users/1835727/ben
 github: notionparallax
+
+# This format is called YAML which stands for Yet Another Markup Language
+# It's supposed to be machine readable, and human readable. It does a pretty 
+# good job of both of those goals, but there are some gotchas:
+# it's structured as key: value pairs.
+# You MUST have a space after that colon. key:value will break it.
+# Indentation matters. The spaces at the start of line 8 and 9 MEAN something,
+# that they're sub parts of the key on line 7
+# anything that starts with a #, like this line, is a comment. It's ignored by
+# the computer.
+# The tests check this file pretty carefully, so make sure it's properly filled in!
