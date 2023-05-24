@@ -1,6 +1,8 @@
 """
 Commenting skills:
 
+NOTE: this file runs just fine, this is for you to learn to use the debugger!
+
 TODO: above every line of code comment what you THINK the line below does.
 TODO: execute that line and write what actually happened next to it.
 

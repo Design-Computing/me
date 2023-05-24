@@ -33,3 +33,5 @@ if __name__ = = "__main__":
     # this isn't either!
     hero = set2exersise2()
     prin(hero)
+    # Say what this prints in your readme file for this week, along with any 
+    # comments about what you learnt by doing this exercise
