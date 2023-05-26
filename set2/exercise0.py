@@ -113,11 +113,12 @@ def minitest(f, args, expected):
     """
     result = f(*args)
 
-    name = (f.__name__,)
-    args = (str(args)[1:-1],)
-    result = (result == expected,)
-    expected = (expected,)
-    print(f"expect {name}({args}) to be {expected} => {result}")
+    name = f.__name__
+    args = str(args)[1:-1]
+    result_correct = result == expected
+    expected = expected
+    result_message = "✅" if result_correct else f"❌👎👎👎👎👎👎👎👎 you returned {result}"
+    print(f"expect {name}({args}) to be {expected} 👉 {result_message}")
     return result == expected
 
 
