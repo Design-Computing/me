@@ -11,8 +11,6 @@ github: notionparallax
 # good job of both of those goals, but there are some gotchas:
 # it's structured as key: value pairs.
 # You MUST have a space after that colon. key:value will break it.
-# Indentation matters. The spaces at the start of line 8 and 9 MEAN something,
-# that they're sub parts of the key on line 7
 # anything that starts with a #, like this line, is a comment. It's ignored by
 # the computer.
 # The tests check this file pretty carefully, so make sure it's properly filled in!
