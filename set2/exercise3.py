@@ -219,19 +219,11 @@ def little_printer(some_kind_of_list, exercise_name):
     results to check that they are tidy.
     Note: You don't have to do anything with it.
     """
+    print("\n🔎 " + exercise_name)
     if some_kind_of_list is not None:
-        print("\n" + exercise_name)
-        if type(some_kind_of_list[0]) is list:
-            for row in some_kind_of_list:
-                for column in row:
-                    print(column, end="")
-                print()
-        else:
-            for column in some_kind_of_list:
-                print(column, end="")
-            print()
+        print(some_kind_of_list)
     else:
-        print(exercise_name, "maybe you haven't got to this one yet?")
+        print("\tMaybe you haven't got to this one yet?")
 
 
 if __name__ == "__main__":
