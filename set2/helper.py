@@ -16,6 +16,7 @@ def minitest(f, args, expected):
     args = str(args)[1:-1]
     result_correct = result == expected
     expected = expected
+    # TODO: #14 use colorama in these to make them look really readable
     if result == None:
         print(
             f"\nExpect {name}({args}) to be {expected}, "
