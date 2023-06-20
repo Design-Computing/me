@@ -242,7 +242,21 @@ def little_printer(some_kind_of_list, exercise_name):
     """
     print("\n🔎 " + exercise_name)
     if some_kind_of_list is not None:
-        print(some_kind_of_list)
+        if (
+            type(some_kind_of_list) is list
+            and len(some_kind_of_list) > 1
+            and type(some_kind_of_list[0]) is list
+        ):
+            # true, nested list
+            print("[")
+            for sub_list in some_kind_of_list:
+                print(f"\t{sub_list}")
+            print("]")
+        elif type(some_kind_of_list) is list and len(some_kind_of_list) > 1:
+            # flat list
+            print(f"\t{some_kind_of_list}")
+        else:
+            print(some_kind_of_list)
     else:
         print("\tMaybe you haven't got to this one yet?")
 
