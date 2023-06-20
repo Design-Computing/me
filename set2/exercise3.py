@@ -1,5 +1,11 @@
 # -*- coding: UTF-8 -*-
-"""Modify each function until the tests pass."""
+from helper import little_printer, minitest
+
+"""
+Welcome to exercise 3 of set 2.
+
+Modify each function until the tests pass.
+"""
 
 
 def is_odd(a_number):
@@ -233,45 +239,17 @@ def loops_7():
     return None
 
 
-def little_printer(some_kind_of_list, exercise_name):
-    """Help to see what's going on.
-
-    This is a helper function that prints your
-    results to check that they are tidy.
-    Note: You don't have to do anything with it.
-    """
-    print("\n🔎 " + exercise_name)
-    if some_kind_of_list is not None:
-        if (
-            type(some_kind_of_list) is list
-            and len(some_kind_of_list) > 1
-            and type(some_kind_of_list[0]) is list
-        ):
-            # true, nested list
-            print("[")
-            for sub_list in some_kind_of_list:
-                print(f"\t{sub_list}")
-            print("]")
-        elif type(some_kind_of_list) is list and len(some_kind_of_list) > 1:
-            # flat list
-            print(f"\t{some_kind_of_list}")
-        else:
-            print(some_kind_of_list)
-    else:
-        print("\tMaybe you haven't got to this one yet?")
-
-
 if __name__ == "__main__":
     # this section does a quick test on your results and prints them nicely.
     # It's NOT the official tests, they are in tests.py as usual.
     # Add to these tests, give them arguments etc. to make sure that your
     # code is robust to the situations that you'll see in action.
-    print(is_odd(1), "is_odd odd")
-    print(is_odd(4), "is_odd even")
-    print(fix_it(True, True), "fix_it")
-    print(fix_it(True, False), "fix_it")
-    print(fix_it(False, True), "fix_it")
-    print(fix_it(False, False), "fix_it")
+    minitest(is_odd, [1], True)
+    minitest(is_odd, [4], False)
+    minitest(fix_it, [True, True], "No Problem")
+    minitest(fix_it, [True, False], "WD-40")
+    minitest(fix_it, [False, True], "Duct Tape")
+    minitest(fix_it, [False, False], "No Problem")
     little_printer(loops_preview(), "loops_preview")
     little_printer(loops_1a(), "loops_1a")
     little_printer(loops_1c(4, "×°×"), "loops_1c")

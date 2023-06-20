@@ -1,4 +1,6 @@
 # -*- coding: UTF-8 -*-
+from helper import minitest
+
 """Modify each function so that it does what the doc string asks you to do.
 
 The command to run the tests is:
@@ -99,32 +101,8 @@ def shout_with_a_number(a_string, a_number):
     return the_answer
 
 
-"""#################################
-You don't need to worry about anything below here. 
-It's there to easily test your code from inside this file 
-so that you can use the debugger more easily.
-   #################################"""
-
-
-def minitest(f, args, expected):
-    """Run a function with a list of args and print a response.
-
-    This is a helper. Don't edit it.
-    """
-    result = f(*args)
-
-    name = f.__name__
-    args = str(args)[1:-1]
-    result_correct = result == expected
-    expected = expected
-    result_message = "✅" if result_correct else f"❌👎👎👎👎👎👎👎👎 you returned {result}"
-    print(f"expect {name}({args}) to be {expected} 👉 {result_message}")
-    return result == expected
-
-
 if __name__ == "__main__":
     """This code runs when you run this file."""
-
     print(
         """
           This section does a quick test on your results and prints them nicely
