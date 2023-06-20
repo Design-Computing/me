@@ -70,6 +70,27 @@ def loops_1c(number_of_items=5, symbol="#"):
     return None
 
 
+def loops_2_preview():
+    """Make a big square 💩field.
+
+    return a list of 4 items, each one a list of 4 items,
+    each one of those, a string with exacly one star in it.
+    E.g.: [
+            ['💩', '💩', '💩', '💩'],
+            ['💩', '💩', '💩', '💩'],
+            ['💩', '💩', '💩', '💩'],
+            ['💩', '💩', '💩', '💩'],
+          ]
+    """
+    field = []
+    for i in range(4):
+        row = []
+        for j in range(4):
+            row.append("💩")
+        field.append(row)
+    return field
+
+
 def loops_2():
     """Make a big square starfield.
 
@@ -240,6 +261,7 @@ if __name__ == "__main__":
     little_printer(loops_preview(), "loops_preview")
     little_printer(loops_1a(), "loops_1a")
     little_printer(loops_1c(4, "×°×"), "loops_1c")
+    little_printer(loops_2_preview(), "loops_2_preview")
     little_printer(loops_2(), "loops_2")
     little_printer(loops_3(), "loops_3")
     little_printer(loops_4(), "loops_4")
