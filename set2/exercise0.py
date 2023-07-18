@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-from helper import minitest
 
 """Modify each function so that it does what the doc string asks you to do.
 
@@ -103,30 +102,38 @@ def shout_with_a_number(a_string, a_number):
 
 if __name__ == "__main__":
     """This code runs when you run this file."""
-    print(
-        """
-          This section does a quick test on your results and prints them nicely
-          It's NOT the official tests, they are in tests.py as usual.
-          Add to these tests if you want, give them arguments etc. to make sure that your
-          code is robust to the situations that you'll see in action.
 
-          the format is: minitest(function_name, [list, of, arguments], expected_result)
-
-          REMEMBER: these aren't the tests that you submit, these are just
-          there to keep you sane."""
-    )
-
-    minitest(add_1, [1], 2)
-    minitest(add_5, [1], 6)
-    minitest(add_5, [6], 11)
-    minitest(add_5, [-3], 2)
-    minitest(add_5, [0.5], 5.5)
-    minitest(adder, [-0.5, -0.5], -1)
-    minitest(adder, [2, 2], 4)
-    minitest(adder, [2, -2], 0)
-    minitest(shout, ["hello"], "HELLO")
-    minitest(really_shout, ["hello"], "HELLO!")
-    minitest(really_shout, [""], "!")
-    minitest(really_shout, ["!"], "!!")
-    minitest(shout_with_a_number, ("hello", 42), "HELLO 42")
-    print("p.s. see note above these results")
+    try:
+        from helper import minitest
+        print(
+            """
+              This section does a quick test on your results and prints them nicely
+              It's NOT the official tests, they are in tests.py as usual.
+              Add to these tests if you want, give them arguments etc. to make sure that your
+              code is robust to the situations that you'll see in action.
+    
+              the format is: minitest(function_name, [list, of, arguments], expected_result)
+    
+              REMEMBER: these aren't the tests that you submit, these are just
+              there to keep you sane."""
+        )
+    
+        minitest(add_1, [1], 2)
+        minitest(add_5, [1], 6)
+        minitest(add_5, [6], 11)
+        minitest(add_5, [-3], 2)
+        minitest(add_5, [0.5], 5.5)
+        minitest(adder, [-0.5, -0.5], -1)
+        minitest(adder, [2, 2], 4)
+        minitest(adder, [2, -2], 0)
+        minitest(shout, ["hello"], "HELLO")
+        minitest(really_shout, ["hello"], "HELLO!")
+        minitest(really_shout, [""], "!")
+        minitest(really_shout, ["!"], "!!")
+        minitest(shout_with_a_number, ("hello", 42), "HELLO 42")
+        print("p.s. see note above these results")
+    except ModuleNotFoundError as e:
+        print("⚠"*20, "\nWe're looking for a module that's missing. That's probably a problem that a tutor needs to figure out.\n")
+        print(e)
+        print("⚠"*20)
+    
