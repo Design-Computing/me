@@ -1,5 +1,4 @@
 # -*- coding: UTF-8 -*-
-from helper import little_printer, minitest
 
 """
 Welcome to exercise 3 of set 2.
@@ -244,19 +243,25 @@ if __name__ == "__main__":
     # It's NOT the official tests, they are in tests.py as usual.
     # Add to these tests, give them arguments etc. to make sure that your
     # code is robust to the situations that you'll see in action.
-    minitest(is_odd, [1], True)
-    minitest(is_odd, [4], False)
-    minitest(fix_it, [True, True], "No Problem")
-    minitest(fix_it, [True, False], "WD-40")
-    minitest(fix_it, [False, True], "Duct Tape")
-    minitest(fix_it, [False, False], "No Problem")
-    little_printer(loops_preview(), "loops_preview")
-    little_printer(loops_1a(), "loops_1a")
-    little_printer(loops_1c(4, "×°×"), "loops_1c")
-    little_printer(loops_2_preview(), "loops_2_preview")
-    little_printer(loops_2(), "loops_2")
-    little_printer(loops_3(), "loops_3")
-    little_printer(loops_4(), "loops_4")
-    little_printer(loops_5(), "loops_5")
-    little_printer(loops_6(), "loops_6")
-    little_printer(loops_7(), "loops_7")
+    try:
+        from helper import little_printer, minitest
+        minitest(is_odd, [1], True)
+        minitest(is_odd, [4], False)
+        minitest(fix_it, [True, True], "No Problem")
+        minitest(fix_it, [True, False], "WD-40")
+        minitest(fix_it, [False, True], "Duct Tape")
+        minitest(fix_it, [False, False], "No Problem")
+        little_printer(loops_preview(), "loops_preview")
+        little_printer(loops_1a(), "loops_1a")
+        little_printer(loops_1c(4, "×°×"), "loops_1c")
+        little_printer(loops_2_preview(), "loops_2_preview")
+        little_printer(loops_2(), "loops_2")
+        little_printer(loops_3(), "loops_3")
+        little_printer(loops_4(), "loops_4")
+        little_printer(loops_5(), "loops_5")
+        little_printer(loops_6(), "loops_6")
+        little_printer(loops_7(), "loops_7")
+    except ModuleNotFoundError as e:
+        print("⚠"*20, "\nWe're looking for a module that's missing. That's probably a problem that a tutor needs to figure out.\n")
+        print(e)
+        print("⚠"*20)
