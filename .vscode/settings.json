@@ -1,3 +1,7 @@
 {
-    "python.formatting.provider": "black"
+  "python.testing.pytestArgs": ["../course/tests", "-rA"],
+  "python.testing.autoTestDiscoverOnSaveEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "python.testing.nosetestsEnabled": false,
+  "python.testing.pytestEnabled": true
 }
