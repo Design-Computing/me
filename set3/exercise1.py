@@ -1,5 +1,5 @@
 # -*- coding: UTF-8 -*-
-"""Set 3.
+"""Set 3, Exercise 1.
 
 Modify each function until the tests pass.
 """

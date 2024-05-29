@@ -1,3 +1,8 @@
+""" 
+This script demonstrates how to catch errors in Python
+you can modify it and make it throw different errors to see how it works
+""" 
+
 try:
     my_list = [1, 2, 3]
     print(my_list[5])  # <-- with throw an IndexError
