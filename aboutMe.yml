@@ -1,8 +1,8 @@
-# This file is UPER IMPORTANT. It's what joins your github name to your
+# This file is SUPER IMPORTANT. It's what joins your github name to your
 # student number, and that's what makes sure that you get a mark.
 
 first_name: Ben
-studentNumber: z1244567 # if you're not at UNSW, your org name, e.g. BVN
+studentNumber: z1234567 # if you're not at UNSW, your org name, e.g. BVN
 # accounts
 stackOverflowLink: https://stackoverflow.com/users/1835727/ben
 github: notionparallax
