@@ -1,0 +1,364 @@
+[
+  {
+    "of_total": 11,
+    "mark": 11,
+    "results": [
+      {
+        "value": 1,
+        "name": "Run a trace on your system details"
+      },
+      {
+        "value": 1,
+        "name": "check that Python and Requests are installed"
+      },
+      {
+        "value": 1,
+        "name": "Exercise1: Print 'Hello world!'"
+      },
+      {
+        "value": 1,
+        "name": "Lab book entry completed"
+      },
+      {
+        "value": 1,
+        "name": "Update your aboutMe.yml"
+      },
+      {
+        "value": 1,
+        "name": "requestsWorking.txt exists"
+      },
+      {
+        "value": 1,
+        "name": "checkID.json exists"
+      },
+      {
+        "value": 1,
+        "name": "You've forked the me repo"
+      },
+      {
+        "value": 1,
+        "name": "You've pushed your work to GitHub: requestsWorking.txt"
+      },
+      {
+        "value": 1,
+        "name": "You've pushed your work to GitHub: checkID.json"
+      },
+      {
+        "value": 1,
+        "name": "You've got a photo for your GitHub account"
+      }
+    ],
+    "week_number": 1
+  },
+  {
+    "of_total": 35,
+    "mark": 35,
+    "results": [
+      {
+        "value": 1,
+        "name": "Exercise 0: add_1 - 55 + 1 = 56"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: add_1 - -5 + 1 = -4"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: add_1 - 0.1 + 1 = 1.1"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: add_5 - 55 + 5 = 60"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: add_5 - -5 + 5 = 0"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: add_5 - 0.1 + 5 = 5.1"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: adder - 5 + 5 = 10"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: adder - -5 + -5 = -10"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: adder - 0.1 + 0.9 = 1"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - you've => YOU'VE"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - got => GOT"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - to => TO"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - fight => FIGHT"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - for => FOR"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - your => YOUR"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - right => RIGHT"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - to => TO"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout - party => PARTY"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 0: shout_with_a_number - hi, 1 => HI 1"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 2: debug the file"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: is_odd - is 2 odd"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: is_odd - is 5 odd"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: fix_it - it moves, and it should  move"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: fix_it - it moves, and it should not move"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: fix_it - it does not move, and it should  move"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: fix_it - it does not move, and it should not move"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_1a - 1d for loop"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_1c - 1d with arguments"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_2 - 10\u00d710 stars"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_3 - 10 matching lists"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_4 - ten rising lists"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_5 - write the coords"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_6 - make a wedge"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: loops_7 - pyramid of stars"
+      },
+      {
+        "value": 1,
+        "name": "Lab book entry completed"
+      }
+    ],
+    "week_number": 2
+  },
+  {
+    "of_total": 29,
+    "mark": 29,
+    "results": [
+      {
+        "value": 1,
+        "name": "Exercise 1: Loop ranger (3, 8, 1)"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Loop ranger (100, 104, 2)"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Two step ranger (100, 104)"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Two step ranger (100, 104)"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Stubborn asker"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Stubborn asker"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: not_number_rejector"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: test_super_asker"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 2: example guessing game"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: guessing game, U&L"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: guessing game, polite failures"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: guessing game, lowerBound bigger than upperBound"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: guessing game, no range to guess in (delta 1)"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 3: guessing game, no range to guess in (equal)"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 1, high: 100, target: 5) Look low"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 1, high: 100, target: 6) Look low"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 1, high: 100, target: 95) Look high"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 1, high: 51, target: 5) Look low"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 1, high: 50, target: 5) Look low"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 5) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 86) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 33) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 80) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 80) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 3) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 7) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 83) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 4) randomly generated test value"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 4: binary_search (low: 0, high: 100, target: 92) randomly generated test value"
+      }
+    ],
+    "week_number": 3
+  },
+  {
+    "of_total": 7,
+    "mark": 7,
+    "results": [
+      {
+        "value": 1,
+        "name": "Exercise 1: get some data out of a JSON file"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: request some words from the internet"
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: Consult the Pokedex."
+      },
+      {
+        "value": 1,
+        "name": "Exercise 1: count the lasers."
+      }
+    ],
+    "week_number": 4
+  },
+  "5",
+  "6",
+  "7",
+  "8",
+  "9",
+  "10"
+]

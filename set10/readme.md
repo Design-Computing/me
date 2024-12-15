@@ -1,1 +1,1 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+TODO: I learnt how to more effectively utilise functions and how powerful they can be to clean up your work

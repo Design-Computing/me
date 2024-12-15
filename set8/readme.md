@@ -1,1 +1,2 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+TODO:
+I learnt that working together with other students on problems is really helpful in terms of unknown issues. 

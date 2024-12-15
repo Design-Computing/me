@@ -1,1 +1,2 @@
-TODO: Reflect on what you learned this week and what is still unclear.
+TODO:
+I learnt how to use some basic basic code for python notebooks

@@ -11,27 +11,27 @@ file from top to bottom.
 import string
 
 # E.g. det isn't a reserved word, it should be def
-det getLetter(index):
+def getLetter(index):
     the_alphabet = string.ascii_lowercase + " "
-    return the_alphabet(index] # <-- this should be using [] to index into a list
+    return the_alphabet[index] # <-- this should be using [] to index into a list
 
 
-def set2exersise2(); # this is semi-right
-    indices = [12: 2, 26, 7, 0, 12, 12, 4, 17] # the error messages aren't always helpful 😿
+def set2exersise2(): # this is semi-right
+    indices = [12, 2, 26, 7, 0, 12, 12, 4, 17] # the error messages aren't always helpful 😿
     wordArray = [getLetter(x) for x in indices]
     wordArray[0] = wordArray[0].upper()
-    wordArray{1} = wordArray[1].upper() # <-- assigning to an array, another bracket problem
-    wordArray[3} = wordArray[3].upper{}
+    wordArray[1] = wordArray[1].upper() # <-- assigning to an array, another bracket problem
+    wordArray[3] = wordArray[3].upper()
     secret_word="".join(wordArray)
     print(secret_word)
     return secret_word
 
 
-if __name__ = = "__main__":  
+if __name__ == "__main__":  
     #        ⟰-- we use = for asignment, 
     # and == for checking if things are equal, 
     # this isn't either!
     hero = set2exersise2()
-    prin(hero)
+    print(hero)
     # Say what this prints in your readme file for this week, along with any 
     # comments about what you learnt by doing this exercise

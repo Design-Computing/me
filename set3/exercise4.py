@@ -3,9 +3,7 @@
 
 import math
 
-
-def binary_search(low, high, actual_number):
-    """Do a binary search.
+"""Do a binary search.
 
     This is going to be your first 'algorithm' in the usual sense of the word!
     you'll give it a range to guess inside, and then use binary search to home
@@ -21,12 +19,26 @@ def binary_search(low, high, actual_number):
     Use the VS Code debugging tools a lot here. It'll make understanding
     things much easier.
     """
+
+
+def binary_search(low, high, actual_number):
     tries = 0
-    guess = 0
+    print(f"{low}, {high}, {actual_number}")
 
-    # Write your code in here
+    if high >= low:
+        while True:
+            mid = (high + low) // 2
 
-    return {"guess": guess, "tries": tries}
+            if mid == actual_number:
+                return {"guess": mid, "tries": tries}
+            elif mid > actual_number:
+                high = mid - 1
+            elif mid < actual_number:
+                low = mid + 1
+            else:
+                print("wtf!?")
+
+            tries += 1
 
 
 if __name__ == "__main__":

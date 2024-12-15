@@ -1,11 +1,11 @@
 # This file is SUPER IMPORTANT. It's what joins your github name to your
 # student number, and that's what makes sure that you get a mark.
 
-first_name: Ben
-studentNumber: z1234567 # if you're not at UNSW, your org name, e.g. BVN
+first_name: Brian
+studentNumber: z5491986 # if you're not at UNSW, your org name, e.g. BVN
 # accounts
-stackOverflowLink: https://stackoverflow.com/users/1835727/ben
-github: notionparallax
+stackOverflowLink: https://stackoverflow.com/users/25304061/brian-thai
+github: BrianThai12
 # This format is called YAML which stands for Yet Another Markup Language
 # It's supposed to be machine readable, and human readable. It does a pretty
 # good job of both of those goals, but there are some gotchas:

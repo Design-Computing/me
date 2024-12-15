@@ -1,6 +1,5 @@
 """All about IO."""
 
-
 import json
 import os
 import requests
@@ -29,18 +28,28 @@ def get_some_details():
     Return a new dictionary that just has the last name, password, and the
     number you get when you add the postcode to the id-value.
     TIP: Make sure that you add the numbers, not concatinate the strings.
-         E.g. 2000 + 3000 = 5000 not 20003000
+        E.g. 2000 + 3000 = 5000 not 20003000
     TIP: Keep a close eye on the format you get back. JSON is nested, so you
-         might need to go deep. E.g to get the name title you would need to:
-         data["results"][0]["name"]["title"]
-         Look out for the type of brackets. [] means list and {} means
-         dictionary, you'll need integer indeces for lists, and named keys for
-         dictionaries.
+        might need to go deep. E.g to get the name title you would need to:
+        data["results"][0]["name"]["title"]
+        Look out for the type of brackets. [] means list and {} means
+        dictionary, you'll need integer indeces for lists, and named keys for
+        dictionaries.
     """
     json_data = open(LOCAL + "/lazyduck.json").read()
 
     data = json.loads(json_data)
-    return {"lastName": None, "password": None, "postcodePlusID": None}
+
+    dr0 = data["results"][0]
+    last_name = dr0["name"]["last"]
+    password = dr0["login"]["password"]
+    postcodePlusID = int(dr0["location"]["postcode"]) + int(dr0["id"]["value"])
+
+    return {
+        "lastName": last_name,
+        "password": password,
+        "postcodePlusID": postcodePlusID,
+    }
 
 
 def wordy_pyramid():
@@ -79,7 +88,25 @@ def wordy_pyramid():
     """
     pyramid = []
 
+    for i in range(3, 21, 2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            word = response.text
+            pyramid.append(word)
+
+    for i in range(20, 2, -2):
+        url = f"https://us-central1-waldenpondpress.cloudfunctions.net/give_me_a_word?wordlength={i}"
+        response = requests.get(url)
+        if response.status_code == 200:
+            word = response.text
+            pyramid.append(word)
+
     return pyramid
+
+
+pyramid = wordy_pyramid
+print(pyramid)
 
 
 def pokedex(low=1, high=5):
@@ -91,18 +118,40 @@ def pokedex(low=1, high=5):
     Parse the json and extract the values needed.
 
     TIP: reading json can someimes be a bit confusing. Use a tool like
-         http://www.jsoneditoronline.org/ to help you see what's going on.
+        http://www.jsoneditoronline.org/ to help you see what's going on.
     TIP: these long json accessors base["thing"]["otherThing"] and so on, can
-         get very long. If you are accessing a thing often, assign it to a
-         variable and then future access will be easier.
+        get very long. If you are accessing a thing often, assign it to a
+        variable and then future access will be easier.
     """
-    id = 5
-    url = f"https://pokeapi.co/api/v2/pokemon/{id}"
-    r = requests.get(url)
-    if r.status_code is 200:
-        the_json = json.loads(r.text)
+    # id = 5
+    # url = f"https://pokeapi.co/api/v2/pokemon/{id}"
+    # r = requests.get(url)
+    # if r.status_code is 200:
+    #     the_json = json.loads(r.text)
 
-    return {"name": None, "weight": None, "height": None}
+    name_of_tallest = ""
+    weight_of_tallest = 0
+    height_of_tallest = 0
+
+    for i in range(low, high):
+        url = f"https://pokeapi.co/api/v2/pokemon/{i}"
+        r = requests.get(url)
+        if r.status_code is 200:
+            the_json = json.loads(r.text)
+            name = the_json["name"]
+            height = the_json["height"]
+            weight = the_json["weight"]
+
+        if height > height_of_tallest:
+            height_of_tallest = height
+            name_of_tallest = name
+            weight_of_tallest = weight
+
+    return {
+        "name": name_of_tallest,
+        "weight": weight_of_tallest,
+        "height": height_of_tallest,
+    }
 
 
 def diarist():
@@ -122,6 +171,18 @@ def diarist():
 
     NOTE: this function doesn't return anything. It has the _side effect_ of modifying the file system
     """
+    f = open(LOCAL + "\Trispokedovetiles(laser).gcode", "r")
+    
+    off_count = 0
+    
+    for x in f:
+        if "M10 P1" in x:
+            off_count += 1
+    g = open(LOCAL + "\lasers.pew", "w")
+    g.write(str(off_count))   
+    g.close()
+
+    print(off_count)
     pass
 
 
