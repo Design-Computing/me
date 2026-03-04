@@ -13,7 +13,7 @@ In each function, where you see:
 
 replace None with the actual answer.
 
-Remember, none of these are trick questions. If it seems like an incredibly 
+Remember, none of these are trick questions. If it seems like an incredibly
 obvious answer, that's because it is!
 """
 
@@ -44,7 +44,7 @@ def add_5(a_number: int) -> int:
     except expressed in python, not english
     """
     # If you need to do any working steps, do them in here
-    the_answer = None # 👈 whenever you see the_answer = None, you need to change that to your actual answer
+    the_answer = None  # 👈 whenever you see the_answer = None, you need to change that to your actual answer
     return the_answer
 
 
@@ -106,6 +106,7 @@ if __name__ == "__main__":
 
     try:
         from helper import minitest
+
         print(
             """
               This section does a quick test on your results and prints them nicely
@@ -118,7 +119,7 @@ if __name__ == "__main__":
               REMEMBER: these aren't the tests that you submit, these are just
               there to keep you sane."""
         )
-    
+
         minitest(add_1, [1], 2)
         minitest(add_5, [1], 6)
         minitest(add_5, [6], 11)
@@ -134,7 +135,9 @@ if __name__ == "__main__":
         minitest(shout_with_a_number, ("hello", 42), "HELLO 42")
         print("p.s. see note above these results")
     except ModuleNotFoundError as e:
-        print("⚠"*20, "\nWe're looking for a module that's missing. That's probably a problem that a tutor needs to figure out.\n")
+        print(
+            "⚠" * 20,
+            "\nWe're looking for a module that's missing. That's probably a problem that a tutor needs to figure out.\n",
+        )
         print(e)
-        print("⚠"*20)
-    
+        print("⚠" * 20)
