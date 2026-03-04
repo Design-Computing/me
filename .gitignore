@@ -1,2 +1,5 @@
 *.pyc
 .vscode/.ropeproject/
+# Test-generated files
+set1/checkID.json
+set1/requestsWorking.txt
