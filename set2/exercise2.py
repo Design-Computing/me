@@ -16,7 +16,7 @@ det getLetter(index):
     return the_alphabet(index] # <-- this should be using [] to index into a list
 
 
-def set2exersise2(); # this is semi-right
+def set2exercise2(); # this is semi-right
     indices = [12: 2, 26, 7, 0, 12, 12, 4, 17] # the error messages aren't always helpful 😿
     wordArray = [getLetter(x) for x in indices]
     wordArray[0] = wordArray[0].upper()
@@ -31,7 +31,7 @@ if __name__ = = "__main__":
     #        ⟰-- we use = for asignment, 
     # and == for checking if things are equal, 
     # this isn't either!
-    hero = set2exersise2()
+    hero = set2exercise2()
     prin(hero)
     # Say what this prints in your readme file for this week, along with any 
     # comments about what you learnt by doing this exercise

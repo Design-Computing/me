@@ -4,13 +4,14 @@
 
 VS Code has a built-in Test Explorer that makes running tests super easy!
 
-### How to Use It:
+### How to Use It
 
 1. **Find the Test Explorer icon** in the left sidebar (it looks like a flask/beaker 🧪)
    - Or use the keyboard shortcut: `Ctrl+Shift+T` (Windows/Linux) or `Cmd+Shift+T` (Mac)
 
 2. **See all your tests** organized by set:
-   ```
+
+   ```txt
    📁 course
      📁 set1
        ✓ test_set1_exercise1.py
@@ -34,14 +35,14 @@ VS Code has a built-in Test Explorer that makes running tests super easy!
 
 5. **Debug tests** - Click the debug icon (🐛) next to any test to run it with breakpoints
 
-### Tips:
+### Tips
 
 - Tests automatically refresh when you save your code
 - You can run tests while editing - no need to switch to the terminal
 - Failed tests show you exactly what went wrong
 - Green checkmarks are very satisfying! 🎉
 
-## The Command Line Way:
+## The Command Line Way
 
 If you prefer the terminal (or the Test Explorer isn't working):
 

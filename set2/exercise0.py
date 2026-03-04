@@ -18,7 +18,7 @@ obvious answer, that's because it is!
 """
 
 
-def add_1(a_number):
+def add_1(a_number: int) -> int:
     """Return a number that is 1 bigger than number given.
 
     This isn't a trick!
@@ -30,7 +30,7 @@ def add_1(a_number):
     return the_answer
 
 
-def add_5(a_number):
+def add_5(a_number: int) -> int:
     """Return a number that is 5 bigger than number given.
 
     This isn't a trick!
@@ -48,7 +48,7 @@ def add_5(a_number):
     return the_answer
 
 
-def adder(a_number, another_number):
+def adder(a_number: int, another_number: int) -> int:
     """Add two numbers.
 
     Same as above, but with any two numbers.
@@ -57,7 +57,7 @@ def adder(a_number, another_number):
     return the_answer
 
 
-def shout(a_string):
+def shout(a_string: str) -> str:
     """Return a string in uppercase.
 
     look up the docs for string methods. Either in the official docs, here:
@@ -72,7 +72,7 @@ def shout(a_string):
     return the_answer
 
 
-def really_shout(a_string):
+def really_shout(a_string: str) -> str:
     """Return a string in uppercase, with an exclamation mark on the end.
 
     In the spirit of being DRY (don't repeat yourself) reuse the shout() function
@@ -85,7 +85,7 @@ def really_shout(a_string):
     return the_answer
 
 
-def shout_with_a_number(a_string, a_number):
+def shout_with_a_number(a_string: str, a_number: int) -> str:
     """Return a string in uppercase with a space and a_number concatentated.
     E.g.
     >>> shout_with_a_number('hello', 42)
