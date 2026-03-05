@@ -2,9 +2,9 @@
 
 """REFACTORING
 
-Refactoring is the process of making your code better. You are usually looking 
-to make it more readable or easier to maintain. Usually you'll do this by 
-pulling out bits of code that encapsulate one idea, especially if that idea is 
+Refactoring is the process of making your code better. You are usually looking
+to make it more readable or easier to maintain. Usually you'll do this by
+pulling out bits of code that encapsulate one idea, especially if that idea is
 used in several places.
 
 We've talked already about the cycle:
@@ -35,7 +35,7 @@ import requests
 
 def wordy_pyramid():
     """Create a pyramid of words from the word API.
-    
+
     This is the OLD way - lots of repeated code!
     Your task: refactor it to use list_of_words_with_lengths from set 5.
     """
@@ -44,7 +44,7 @@ def wordy_pyramid():
         "give_me_a_word?wordlength={length}"
     )
     pyramid_list = []
-    
+
     # Going up the pyramid
     for i in range(3, 21, 2):
         url = baseURL.format(length=i)
@@ -54,7 +54,7 @@ def wordy_pyramid():
             pyramid_list.append(message)
         else:
             print("failed a request", r.status_code, i)
-    
+
     # Going down the pyramid
     for i in range(20, 3, -2):
         url = baseURL.format(length=i)
