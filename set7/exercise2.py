@@ -11,68 +11,100 @@ This exercise covers functional programming concepts and Python built-ins:
 These make your code more concise and "Pythonic"!
 """
 
-from typing import Callable, List, Tuple, Dict
 from random import randint
 
 # Sample data for exercises
 pets = [
-    "dog", "goat", "pig", "sheep", "cattle", "zebu", "cat", "chicken",
-    "guinea pig", "donkey", "duck", "water buffalo",
-    "western honey bee", "dromedary camel", "horse", "silkmoth",
-    "pigeon", "goose", "yak", "bactrian camel", "llama", "alpaca",
-    "guineafowl", "ferret", "muscovy duck", "barbary dove",
-    "bali cattle", "gayal", "turkey", "goldfish", "rabbit", "koi",
-    "canary", "society finch", "fancy mouse", "siamese fighting fish",
-    "fancy rat and lab rat", "mink", "red fox", "hedgehog", "guppy"
+    "dog",
+    "goat",
+    "pig",
+    "sheep",
+    "cattle",
+    "zebu",
+    "cat",
+    "chicken",
+    "guinea pig",
+    "donkey",
+    "duck",
+    "water buffalo",
+    "western honey bee",
+    "dromedary camel",
+    "horse",
+    "silkmoth",
+    "pigeon",
+    "goose",
+    "yak",
+    "bactrian camel",
+    "llama",
+    "alpaca",
+    "guineafowl",
+    "ferret",
+    "muscovy duck",
+    "barbary dove",
+    "bali cattle",
+    "gayal",
+    "turkey",
+    "goldfish",
+    "rabbit",
+    "koi",
+    "canary",
+    "society finch",
+    "fancy mouse",
+    "siamese fighting fish",
+    "fancy rat and lab rat",
+    "mink",
+    "red fox",
+    "hedgehog",
+    "guppy",
 ]
 
 numbers = [randint(1, 100) for _ in range(20)]
 
 
 # =============================================================================
-# PART 1: LAMBDA FUNCTIONS
+# PART 1: LAMBDA FUNCTIONS WITH SORTED
 # =============================================================================
+# Lambdas are anonymous functions - small, one-line functions used inline.
+# They're perfect for simple operations you don't want to write a full def for!
+# One common use: custom sorting with sorted()
 
-def double_with_lambda() -> Callable[[int], int]:
-    """Use a lambda function to double a number.
-    
+
+def sort_pets_by_length() -> list[str]:
+    """Sort pets by name length using a lambda.
+
     Lambda syntax: lambda parameter: expression
-    Example: lambda x: x * 2
-    
-    Create a lambda that takes a number and returns it doubled.
-    
+    Example: lambda x: len(x)
+
+    sorted() can take a key parameter with a lambda!
+
+    Hint: sorted(pets, key=lambda p: len(p))
+
     Returns:
-        function: A lambda function that doubles its input
+        list: Pets sorted by name length (shortest first)
     """
     pass
 
 
-def add_ten_with_lambda() -> Callable[[int], int]:
-    """Use a lambda function to add 10 to a number.
-    
+def sort_pets_by_last_letter() -> list[str]:
+    """Sort pets by their last letter using a lambda.
+
+    Hint: lambda p: p[-1]
+
     Returns:
-        function: A lambda function
+        list: Pets sorted by last letter
     """
     pass
 
 
-def is_even_lambda() -> Callable[[int], bool]:
-    """Use a lambda function to check if a number is even.
-    
-    Hint: Use the modulo operator %
-    lambda x: x % 2 == 0
-    
-    Returns:
-        function: A lambda that returns True if even, False if odd
-    """
-    pass
+def sort_pets_reverse_alphabetical() -> list[str]:
+    """Sort pets in reverse alphabetical order.
 
+    You can combine sorted() with reverse=True!
 
-def get_string_length() -> Callable[[str], int]:
-    """Use a lambda to get the length of a string.
-    
+    Hint: sorted(pets, reverse=True)
+
     Returns:
-        function: A lambda using len()
+        list: Pets sorted Z to A
     """
     pass
 
@@ -81,50 +113,51 @@ def get_string_length() -> Callable[[str], int]:
 # PART 2: MAP FUNCTION
 # =============================================================================
 
-def map_double_numbers() -> List[int]:
+
+def map_double_numbers() -> list[int]:
     """Use map with a lambda to double all numbers in the numbers list.
-    
+
     map() applies a function to each item in a sequence.
-    
+
     Syntax: list(map(function, sequence))
-    
+
     Note: map() returns a map object, convert it to a list!
-    
+
     Returns:
         list: All numbers doubled
     """
     pass
 
 
-def map_pet_lengths() -> List[int]:
+def map_pet_lengths() -> list[int]:
     """Use map to get the length of each pet name.
-    
+
     You can use map with the built-in len function!
-    
+
     Syntax: list(map(len, pets))
-    
+
     Returns:
         list: Length of each pet name
     """
     pass
 
 
-def map_first_letter() -> List[str]:
+def map_first_letter() -> list[str]:
     """Use map with a lambda to get the first letter of each pet name.
-    
+
     Hint: lambda p: p[0]
-    
+
     Returns:
         list: First letter of each pet name
     """
     pass
 
 
-def map_uppercase() -> List[str]:
+def map_uppercase() -> list[str]:
     """Use map to convert all pet names to uppercase.
-    
+
     Hint: You can use lambda p: p.upper() or just use str.upper directly!
-    
+
     Returns:
         list: All pet names in uppercase
     """
@@ -135,35 +168,36 @@ def map_uppercase() -> List[str]:
 # PART 3: FILTER FUNCTION
 # =============================================================================
 
-def filter_long_names() -> List[str]:
+
+def filter_long_names() -> list[str]:
     """Use filter to get only pets with names longer than 10 characters.
-    
+
     filter() keeps only items where the function returns True.
-    
+
     Syntax: list(filter(function, sequence))
-    
+
     Returns:
         list: Pets with long names
     """
     pass
 
 
-def filter_even_numbers() -> List[int]:
+def filter_even_numbers() -> list[int]:
     """Use filter to get only even numbers from the numbers list.
-    
-    Hint: Use your is_even_lambda from earlier!
-    
+
+    Hint: lambda x: x % 2 == 0
+
     Returns:
         list: Only even numbers
     """
     pass
 
 
-def filter_pets_with_space() -> List[str]:
+def filter_pets_with_space() -> list[str]:
     """Use filter to get pets whose names contain a space.
-    
+
     Hint: lambda p: ' ' in p
-    
+
     Returns:
         list: Pets with spaces in their names
     """
@@ -174,14 +208,15 @@ def filter_pets_with_space() -> List[str]:
 # PART 4: BUILT-IN FUNCTIONS
 # =============================================================================
 
+
 def find_longest_pet_name() -> str:
     """Find the longest pet name using max().
-    
+
     max() can take a key parameter!
-    
+
     Syntax: max(sequence, key=function)
     Example: max(pets, key=len)
-    
+
     Returns:
         str: The longest pet name
     """
@@ -190,7 +225,7 @@ def find_longest_pet_name() -> str:
 
 def find_shortest_pet_name() -> str:
     """Find the shortest pet name using min().
-    
+
     Returns:
         str: The shortest pet name
     """
@@ -199,9 +234,9 @@ def find_shortest_pet_name() -> str:
 
 def find_max_number() -> int:
     """Find the maximum number in the numbers list.
-    
+
     Simple: max(numbers)
-    
+
     Returns:
         int: The largest number
     """
@@ -210,7 +245,7 @@ def find_max_number() -> int:
 
 def find_min_number() -> int:
     """Find the minimum number in the numbers list.
-    
+
     Returns:
         int: The smallest number
     """
@@ -219,9 +254,9 @@ def find_min_number() -> int:
 
 def sum_all_numbers() -> int:
     """Calculate the sum of all numbers.
-    
+
     Use the built-in sum() function!
-    
+
     Returns:
         int: Sum of all numbers
     """
@@ -230,9 +265,9 @@ def sum_all_numbers() -> int:
 
 def average_number() -> float:
     """Calculate the average of all numbers.
-    
+
     Average = sum / count
-    
+
     Returns:
         float: Average of numbers
     """
@@ -243,28 +278,29 @@ def average_number() -> float:
 # PART 5: ZIP FUNCTION
 # =============================================================================
 
-def zip_pets_with_numbers() -> List[Tuple[str, int]]:
+
+def zip_pets_with_numbers() -> list[tuple[str, int]]:
     """Use zip to pair each pet with a number.
-    
+
     zip() combines multiple sequences into tuples.
-    
+
     Syntax: list(zip(sequence1, sequence2))
-    
+
     Returns:
-        list: List of (pet, number) tuples
+        list: list of (pet, number) tuples
     """
     pass
 
 
-def create_pet_dictionary() -> Dict[str, int]:
+def create_pet_dictionary() -> dict[str, int]:
     """Create a dictionary mapping pets to numbers using zip.
-    
+
     You can convert zipped tuples directly to a dict!
-    
+
     Syntax: dict(zip(keys, values))
-    
+
     Returns:
-        dict: Dictionary of pet -> number
+        dict: dictionary of pet -> number
     """
     pass
 
@@ -273,39 +309,40 @@ def create_pet_dictionary() -> Dict[str, int]:
 # PART 6: ENUMERATE FUNCTION
 # =============================================================================
 
-def enumerate_pets() -> List[Tuple[int, str]]:
+
+def enumerate_pets() -> list[tuple[int, str]]:
     """Use enumerate to get (index, pet) pairs.
-    
+
     enumerate() gives you index and value together!
-    
+
     Syntax: list(enumerate(sequence))
-    
+
     Returns:
-        list: List of (index, pet) tuples
+        list: list of (index, pet) tuples
     """
     pass
 
 
-def enumerate_from_one() -> List[Tuple[int, str]]:
+def enumerate_from_one() -> list[tuple[int, str]]:
     """Use enumerate starting from 1 instead of 0.
-    
+
     enumerate() takes an optional start parameter!
-    
+
     Syntax: list(enumerate(sequence, start=1))
-    
+
     Returns:
-        list: List of (index, pet) tuples starting from 1
+        list: list of (index, pet) tuples starting from 1
     """
     pass
 
 
-def find_pet_positions() -> List[int]:
+def find_pet_positions() -> list[int]:
     """Find the positions (indices) of all pets starting with 'g'.
-    
+
     Use enumerate in a list comprehension!
-    
+
     Hint: [i for i, p in enumerate(pets) if p.startswith('g')]
-    
+
     Returns:
         list: Indices of pets starting with 'g'
     """
@@ -316,33 +353,38 @@ def find_pet_positions() -> List[int]:
 # BONUS CHALLENGES
 # =============================================================================
 
-def combine_map_filter() -> List[str]:
+
+def combine_map_filter() -> list[str]:
     """First filter for long names, then map to uppercase.
-    
+
     You can chain operations!
-    
+    Hint: You can nest functions or use intermediate variables.
+
     Returns:
-        list: Long pet names in uppercase
+        list: Long pet names (>10 chars) in uppercase
     """
     pass
 
 
-def sort_by_last_letter() -> List[str]:
-    """Sort pets by their last letter.
-    
-    Use sorted() with a key parameter.
-    
-    Hint: sorted(pets, key=lambda p: p[-1])
-    
+def complex_sort() -> list[str]:
+    """Sort pets by: 1) length, 2) alphabetically if same length.
+
+    You can use tuples in the key function!
+    When sorted by tuple, it sorts by first element, then second, etc.
+
+    Hint: sorted(pets, key=lambda p: (len(p), p))
+
     Returns:
-        list: Pets sorted by last letter
+        list: Pets sorted by length, then alphabetically
     """
     pass
 
 
 if __name__ == "__main__":
     # Test your functions here!
-    print("Double lambda:", double_with_lambda()(5))
+    print("Pets by length:", sort_pets_by_length()[:5])
+    print("\nDoubled numbers:", map_double_numbers()[:5])
+    print("Even numbers:", filter_even_numbers()[:5])
     print("\nLongest pet:", find_longest_pet_name())
     print("Shortest pet:", find_shortest_pet_name())
     print("\nMax number:", find_max_number())

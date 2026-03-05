@@ -150,31 +150,33 @@ def every_third_pet() -> list[str]:
 def append_example() -> list[str]:
     """Demonstrate append by adding a single item to a list.
 
-    Create a new list, then use .append() to add the string "hamster" to it.
+    Use .append() to add the string "hamster" to the my_pets list.
     Then append another string "rabbit".
 
     Returns:
-        list: A list with two items
+        list: A list with four items ["cat", "dog", "hamster", "rabbit"]
     """
-    pass
+    my_pets = ["cat", "dog"]
+
+    return my_pets
 
 
 def extend_example() -> list[str]:
     """Demonstrate extend by adding multiple items to a list.
 
-    Create a new list, then use .extend() to add ["hamster", "rabbit"] to it.
+    Use .extend() to add ["hamster", "rabbit"] to the my_pets list.
     Then extend with ["guinea pig", "mouse"].
 
     Returns:
-        list: A list with four items
+        list: A list with six items ["cat", "dog", "hamster", "rabbit", "guinea pig", "mouse"]
     """
-    pass
+    my_pets = ["cat", "dog"]
+
+    return my_pets
 
 
 def append_vs_extend_comparison() -> tuple[list, list[str]]:
     """Show the difference between append and extend.
-
-    Create two lists: list1 and list2, both starting as empty.
 
     For list1:
     - Use .append() to add the list ["cat", "dog"]
@@ -191,7 +193,10 @@ def append_vs_extend_comparison() -> tuple[list, list[str]]:
         list1 = [["cat", "dog"]]  # nested list
         list2 = ["cat", "dog"]    # flat list
     """
-    pass
+    list1 = []
+    list2 = []
+
+    return (list1, list2)
 
 
 # =============================================================================
