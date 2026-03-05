@@ -4,10 +4,15 @@
 ## Reflection Prompts
 Think about these questions as you write your reflection:
 
-### Recursion
+### Understanding Recursion
 - Can you explain recursion in your own words?
 - What's the difference between recursion and iteration (loops)?
 - What's a "base case" and why is it critical?
+
+### Word API with Recursion
+- How does get_a_word_of_length_n work with the API?
+- How did you use recursion in list_of_words_with_lengths?
+- Why is recursion useful for building lists?
 
 ### ABBA Pattern
 - How does the ABBA function work?
@@ -18,11 +23,6 @@ Think about these questions as you write your reflection:
 - How does recursive drawing work?
 - What patterns do you see in the recursive calls?
 - Could you adapt this to draw other fractals?
-
-### Refactoring
-- How did you refactor `wordy_pyramid` to use `list_of_words_with_lengths`?
-- Why is breaking code into smaller functions helpful?
-- How does recursion help with the word API?
 
 ### Mind Bending
 - When did recursion "click" for you?
