@@ -10,6 +10,7 @@ This exercise covers more advanced Python features:
 These features are powerful tools for writing efficient, elegant Python code!
 """
 
+from typing import Dict, List, Tuple, Generator
 from collections import Counter, defaultdict
 from random import randint
 
@@ -32,7 +33,7 @@ numbers = [randint(0, 100) for _ in range(1000)]
 # PART 1: DICTIONARY COMPREHENSIONS
 # =============================================================================
 
-def create_pet_length_dict():
+def create_pet_length_dict() -> Dict[str, int]:
     """Create a dictionary mapping pet names to their lengths.
     
     Dict comprehension syntax: {key: value for item in sequence}
@@ -45,7 +46,7 @@ def create_pet_length_dict():
     pass
 
 
-def create_number_square_dict():
+def create_number_square_dict() -> Dict[int, int]:
     """Create a dictionary mapping numbers 0-9 to their squares.
     
     Hint: {n: n**2 for n in range(10)}
@@ -56,7 +57,7 @@ def create_number_square_dict():
     pass
 
 
-def create_first_letter_dict():
+def create_first_letter_dict() -> Dict[str, str]:
     """Create a dictionary mapping first letters to pet names.
     
     Map each unique first letter to the first pet starting with that letter.
@@ -71,7 +72,7 @@ def create_first_letter_dict():
     pass
 
 
-def filter_dict_comprehension():
+def filter_dict_comprehension() -> Dict[str, int]:
     """Create a dictionary of only pets with names longer than 8 characters.
     
     You can add a condition to dict comprehensions!
@@ -88,7 +89,7 @@ def filter_dict_comprehension():
 # PART 2: GENERATORS
 # =============================================================================
 
-def count_up_generator(start, end):
+def count_up_generator(start: int, end: int) -> Generator[int, None, None]:
     """Create a generator that counts from start to end.
     
     Use 'yield' instead of 'return' to make a generator!
@@ -109,7 +110,7 @@ def count_up_generator(start, end):
     pass
 
 
-def fibonacci_generator(n):
+def fibonacci_generator(n: int) -> Generator[int, None, None]:
     """Generate the first n Fibonacci numbers.
     
     Fibonacci sequence: 0, 1, 1, 2, 3, 5, 8, 13, ...
@@ -132,7 +133,7 @@ def fibonacci_generator(n):
     pass
 
 
-def even_numbers_generator(max_num):
+def even_numbers_generator(max_num: int) -> Generator[int, None, None]:
     """Generate all even numbers from 0 up to max_num.
     
     Args:
@@ -144,7 +145,7 @@ def even_numbers_generator(max_num):
     pass
 
 
-def infinite_counter():
+def infinite_counter() -> Generator[int, None, None]:
     """Create an infinite counter generator.
     
     This generator never stops! It counts 0, 1, 2, 3, ...forever.
@@ -168,7 +169,7 @@ def infinite_counter():
 # PART 3: COLLECTIONS.COUNTER
 # =============================================================================
 
-def count_first_letters():
+def count_first_letters() -> Counter:
     """Count how many pets start with each letter.
     
     Use Counter to count first letters of all pet names!
@@ -181,7 +182,7 @@ def count_first_letters():
     pass
 
 
-def count_number_frequency():
+def count_number_frequency() -> Counter:
     """Count how many times each number appears in the numbers list.
     
     Counter is perfect for frequency analysis!
@@ -192,7 +193,7 @@ def count_number_frequency():
     pass
 
 
-def most_common_number():
+def most_common_number() -> Tuple[int, int]:
     """Find the most common number in the numbers list.
     
     Counter has a .most_common() method!
@@ -206,7 +207,7 @@ def most_common_number():
     pass
 
 
-def top_three_letters():
+def top_three_letters() -> List[Tuple[str, int]]:
     """Find the three most common first letters in pet names.
     
     Use Counter and .most_common(3)
@@ -221,7 +222,7 @@ def top_three_letters():
 # PART 4: COLLECTIONS.DEFAULTDICT
 # =============================================================================
 
-def group_pets_by_first_letter():
+def group_pets_by_first_letter() -> Dict[str, List[str]]:
     """Group all pets by their first letter using defaultdict.
     
     defaultdict automatically creates entries for new keys!
@@ -238,7 +239,7 @@ def group_pets_by_first_letter():
     pass
 
 
-def group_pets_by_length():
+def group_pets_by_length() -> Dict[int, List[str]]:
     """Group pets by their name length using defaultdict.
     
     Returns:
@@ -247,7 +248,7 @@ def group_pets_by_length():
     pass
 
 
-def count_with_defaultdict():
+def count_with_defaultdict() -> Dict[str, int]:
     """Count first letters using defaultdict(int).
     
     defaultdict(int) starts at 0, so you can just += 1
@@ -267,7 +268,7 @@ def count_with_defaultdict():
 # BONUS CHALLENGES
 # =============================================================================
 
-def lazy_evaluation_demo():
+def lazy_evaluation_demo() -> Generator[int, None, None]:
     """Demonstrate why generators are memory efficient.
     
     Create a generator that yields squares of numbers from 0 to 1,000,000.
@@ -281,7 +282,7 @@ def lazy_evaluation_demo():
     pass
 
 
-def chain_generators():
+def chain_generators() -> List[int]:
     """Use multiple generators together.
     
     Create a generator that:
@@ -296,7 +297,7 @@ def chain_generators():
     pass
 
 
-def word_length_histogram():
+def word_length_histogram() -> Counter:
     """Create a histogram of pet name lengths.
     
     Use Counter to count how many pets have each name length.
@@ -310,7 +311,7 @@ def word_length_histogram():
     pass
 
 
-def pets_by_length_nested():
+def pets_by_length_nested() -> Dict[int, Dict[str, List[str]]]:
     """Create nested defaultdict to group pets by length and first letter.
     
     Structure: {length: {first_letter: [pets]}}

@@ -11,6 +11,7 @@ This exercise covers functional programming concepts and Python built-ins:
 These make your code more concise and "Pythonic"!
 """
 
+from typing import Callable, List, Tuple, Dict
 from random import randint
 
 # Sample data for exercises
@@ -32,7 +33,7 @@ numbers = [randint(1, 100) for _ in range(20)]
 # PART 1: LAMBDA FUNCTIONS
 # =============================================================================
 
-def double_with_lambda():
+def double_with_lambda() -> Callable[[int], int]:
     """Use a lambda function to double a number.
     
     Lambda syntax: lambda parameter: expression
@@ -46,7 +47,7 @@ def double_with_lambda():
     pass
 
 
-def add_ten_with_lambda():
+def add_ten_with_lambda() -> Callable[[int], int]:
     """Use a lambda function to add 10 to a number.
     
     Returns:
@@ -55,7 +56,7 @@ def add_ten_with_lambda():
     pass
 
 
-def is_even_lambda():
+def is_even_lambda() -> Callable[[int], bool]:
     """Use a lambda function to check if a number is even.
     
     Hint: Use the modulo operator %
@@ -67,7 +68,7 @@ def is_even_lambda():
     pass
 
 
-def get_string_length():
+def get_string_length() -> Callable[[str], int]:
     """Use a lambda to get the length of a string.
     
     Returns:
@@ -80,7 +81,7 @@ def get_string_length():
 # PART 2: MAP FUNCTION
 # =============================================================================
 
-def map_double_numbers():
+def map_double_numbers() -> List[int]:
     """Use map with a lambda to double all numbers in the numbers list.
     
     map() applies a function to each item in a sequence.
@@ -95,7 +96,7 @@ def map_double_numbers():
     pass
 
 
-def map_pet_lengths():
+def map_pet_lengths() -> List[int]:
     """Use map to get the length of each pet name.
     
     You can use map with the built-in len function!
@@ -108,7 +109,7 @@ def map_pet_lengths():
     pass
 
 
-def map_first_letter():
+def map_first_letter() -> List[str]:
     """Use map with a lambda to get the first letter of each pet name.
     
     Hint: lambda p: p[0]
@@ -119,7 +120,7 @@ def map_first_letter():
     pass
 
 
-def map_uppercase():
+def map_uppercase() -> List[str]:
     """Use map to convert all pet names to uppercase.
     
     Hint: You can use lambda p: p.upper() or just use str.upper directly!
@@ -134,7 +135,7 @@ def map_uppercase():
 # PART 3: FILTER FUNCTION
 # =============================================================================
 
-def filter_long_names():
+def filter_long_names() -> List[str]:
     """Use filter to get only pets with names longer than 10 characters.
     
     filter() keeps only items where the function returns True.
@@ -147,7 +148,7 @@ def filter_long_names():
     pass
 
 
-def filter_even_numbers():
+def filter_even_numbers() -> List[int]:
     """Use filter to get only even numbers from the numbers list.
     
     Hint: Use your is_even_lambda from earlier!
@@ -158,7 +159,7 @@ def filter_even_numbers():
     pass
 
 
-def filter_pets_with_space():
+def filter_pets_with_space() -> List[str]:
     """Use filter to get pets whose names contain a space.
     
     Hint: lambda p: ' ' in p
@@ -173,7 +174,7 @@ def filter_pets_with_space():
 # PART 4: BUILT-IN FUNCTIONS
 # =============================================================================
 
-def find_longest_pet_name():
+def find_longest_pet_name() -> str:
     """Find the longest pet name using max().
     
     max() can take a key parameter!
@@ -187,7 +188,7 @@ def find_longest_pet_name():
     pass
 
 
-def find_shortest_pet_name():
+def find_shortest_pet_name() -> str:
     """Find the shortest pet name using min().
     
     Returns:
@@ -196,7 +197,7 @@ def find_shortest_pet_name():
     pass
 
 
-def find_max_number():
+def find_max_number() -> int:
     """Find the maximum number in the numbers list.
     
     Simple: max(numbers)
@@ -207,7 +208,7 @@ def find_max_number():
     pass
 
 
-def find_min_number():
+def find_min_number() -> int:
     """Find the minimum number in the numbers list.
     
     Returns:
@@ -216,7 +217,7 @@ def find_min_number():
     pass
 
 
-def sum_all_numbers():
+def sum_all_numbers() -> int:
     """Calculate the sum of all numbers.
     
     Use the built-in sum() function!
@@ -227,7 +228,7 @@ def sum_all_numbers():
     pass
 
 
-def average_number():
+def average_number() -> float:
     """Calculate the average of all numbers.
     
     Average = sum / count
@@ -242,7 +243,7 @@ def average_number():
 # PART 5: ZIP FUNCTION
 # =============================================================================
 
-def zip_pets_with_numbers():
+def zip_pets_with_numbers() -> List[Tuple[str, int]]:
     """Use zip to pair each pet with a number.
     
     zip() combines multiple sequences into tuples.
@@ -255,7 +256,7 @@ def zip_pets_with_numbers():
     pass
 
 
-def create_pet_dictionary():
+def create_pet_dictionary() -> Dict[str, int]:
     """Create a dictionary mapping pets to numbers using zip.
     
     You can convert zipped tuples directly to a dict!
@@ -272,7 +273,7 @@ def create_pet_dictionary():
 # PART 6: ENUMERATE FUNCTION
 # =============================================================================
 
-def enumerate_pets():
+def enumerate_pets() -> List[Tuple[int, str]]:
     """Use enumerate to get (index, pet) pairs.
     
     enumerate() gives you index and value together!
@@ -285,7 +286,7 @@ def enumerate_pets():
     pass
 
 
-def enumerate_from_one():
+def enumerate_from_one() -> List[Tuple[int, str]]:
     """Use enumerate starting from 1 instead of 0.
     
     enumerate() takes an optional start parameter!
@@ -298,7 +299,7 @@ def enumerate_from_one():
     pass
 
 
-def find_pet_positions():
+def find_pet_positions() -> List[int]:
     """Find the positions (indices) of all pets starting with 'g'.
     
     Use enumerate in a list comprehension!
@@ -315,7 +316,7 @@ def find_pet_positions():
 # BONUS CHALLENGES
 # =============================================================================
 
-def combine_map_filter():
+def combine_map_filter() -> List[str]:
     """First filter for long names, then map to uppercase.
     
     You can chain operations!
@@ -326,7 +327,7 @@ def combine_map_filter():
     pass
 
 
-def sort_by_last_letter():
+def sort_by_last_letter() -> List[str]:
     """Sort pets by their last letter.
     
     Use sorted() with a key parameter.
